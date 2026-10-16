@@ -5,6 +5,12 @@ declare(strict_types=1);
 namespace Rathauslotse\BayernPortal;
 
 use Rathauslotse\BayernPortal\Contracts\Connector;
+use Rathauslotse\BayernPortal\Resources\AgencyResource;
+use Rathauslotse\BayernPortal\Resources\AuthorityResource;
+use Rathauslotse\BayernPortal\Resources\ContactResource;
+use Rathauslotse\BayernPortal\Resources\LifeSituationResource;
+use Rathauslotse\BayernPortal\Resources\ServiceDescriptionResource;
+use Rathauslotse\BayernPortal\Resources\ServiceResource;
 use Rathauslotse\BayernPortal\Support\Validate;
 
 /**
@@ -19,6 +25,55 @@ final class BayernPortal
         protected readonly ?string $municipalityKey = null,
     ) {
         Validate::municipalityKey($municipalityKey);
+    }
+
+    /**
+     * Agencies (Dienststellen) and their services, forms, online procedures,
+     * service descriptions and life situations.
+     */
+    public function agencies(): AgencyResource
+    {
+        return new AgencyResource($this->connector, $this->municipalityKey);
+    }
+
+    /**
+     * Authorities (Behörden), their buildings, contacts and services.
+     */
+    public function authorities(): AuthorityResource
+    {
+        return new AuthorityResource($this->connector, $this->municipalityKey);
+    }
+
+    /**
+     * Contact persons (Ansprechpartner).
+     */
+    public function contacts(): ContactResource
+    {
+        return new ContactResource($this->connector, $this->municipalityKey);
+    }
+
+    /**
+     * Services (Leistungen).
+     */
+    public function services(): ServiceResource
+    {
+        return new ServiceResource($this->connector, $this->municipalityKey);
+    }
+
+    /**
+     * Full service descriptions (Leistungsbeschreibungen).
+     */
+    public function serviceDescriptions(): ServiceDescriptionResource
+    {
+        return new ServiceDescriptionResource($this->connector, $this->municipalityKey);
+    }
+
+    /**
+     * Life situations (Lebenslagen).
+     */
+    public function lifeSituations(): LifeSituationResource
+    {
+        return new LifeSituationResource($this->connector, $this->municipalityKey);
     }
 
     /**

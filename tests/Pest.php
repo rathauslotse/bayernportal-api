@@ -46,3 +46,24 @@ function jsonFixture(string $name): array
 {
     return json_decode((string) file_get_contents(__DIR__.'/Fixtures/'.$name.'.json'), true, 512, JSON_THROW_ON_ERROR);
 }
+
+/**
+ * Fake every API request with the given fixture.
+ *
+ * @param  array<string, string>  $headers
+ */
+function fakeApi(string $fixture, array $headers = [], int $status = 200): void
+{
+    Illuminate\Support\Facades\Http::fake(['*' => Illuminate\Support\Facades\Http::response(jsonFixture($fixture), $status, $headers)]);
+}
+
+/**
+ * Assert that exactly this path (relative to the base URL, including the
+ * sorted query string) was requested.
+ */
+function assertRequested(string $pathAndQuery): void
+{
+    Illuminate\Support\Facades\Http::assertSent(
+        fn (Illuminate\Http\Client\Request $request): bool => $request->url() === TestCase::BASE_URL.$pathAndQuery,
+    );
+}

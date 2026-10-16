@@ -8,6 +8,7 @@ use BackedEnum;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Rathauslotse\BayernPortal\Contracts\Connector;
+use Rathauslotse\BayernPortal\Exceptions\NotFoundException;
 use Rathauslotse\BayernPortal\Pagination\LinkHeader;
 use Rathauslotse\BayernPortal\Pagination\Page;
 use Rathauslotse\BayernPortal\Pagination\Paginator;
@@ -44,10 +45,19 @@ abstract class Resource
      * @param  list<string>  $wrappers
      * @param  callable(Payload): TItem  $map
      * @return TItem
+     *
+     * @throws NotFoundException when the API answers with an empty body.
      */
     protected function one(string $path, array $query, array $wrappers, callable $map): mixed
     {
-        return $map(Payload::single($this->connector->get($path, $query)->json(), ...$wrappers));
+        $response = $this->connector->get($path, $query);
+        $payload = Payload::single($response->json(), ...$wrappers);
+
+        if ($payload->isEmpty()) {
+            throw NotFoundException::fromResponse($response, $path);
+        }
+
+        return $map($payload);
     }
 
     /**
