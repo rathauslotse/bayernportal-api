@@ -4,8 +4,11 @@ declare(strict_types=1);
 
 namespace Rathauslotse\BayernPortal\Facades;
 
+use Illuminate\Http\Client\Factory;
 use Illuminate\Support\Facades\Facade;
 use Rathauslotse\BayernPortal\BayernPortal as Client;
+use Rathauslotse\BayernPortal\Http\ConnectorOptions;
+use Rathauslotse\BayernPortal\Testing\BayernPortalFake;
 
 /**
  * @method static \Rathauslotse\BayernPortal\Resources\AgencyResource agencies()
@@ -24,6 +27,29 @@ use Rathauslotse\BayernPortal\BayernPortal as Client;
  */
 class BayernPortal extends Facade
 {
+    /**
+     * Replace the API with realistic fake responses for tests.
+     *
+     * Every endpoint answers with a bundled fixture unless a custom response
+     * is given for its path (relative to the API base URL, wildcards
+     * allowed). Responses may be arrays (JSON bodies), strings,
+     * `Http::response()` results or closures receiving the request.
+     *
+     * @param  array<string, mixed>  $responses
+     */
+    public static function fake(array $responses = []): BayernPortalFake
+    {
+        $baseUrl = config('bayernportal.base_url');
+
+        $fake = new BayernPortalFake(
+            app(Factory::class),
+            $responses,
+            is_string($baseUrl) && $baseUrl !== '' ? $baseUrl : ConnectorOptions::DEFAULT_BASE_URL,
+        );
+
+        return $fake->register();
+    }
+
     protected static function getFacadeAccessor(): string
     {
         return Client::class;

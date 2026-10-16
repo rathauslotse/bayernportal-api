@@ -2,7 +2,13 @@
 
 declare(strict_types=1);
 
+use Dotenv\Dotenv;
 use Rathauslotse\BayernPortal\Tests\TestCase;
+
+// Credentials for the live suite may live in an untracked .env.testing.
+if (is_file(dirname(__DIR__).'/.env.testing')) {
+    Dotenv::createUnsafeImmutable(dirname(__DIR__), '.env.testing')->safeLoad();
+}
 
 pest()->extend(TestCase::class)->in('Unit', 'Feature');
 
@@ -34,8 +40,35 @@ pest()->extend(TestCase::class)
         if ($baseUrl = getenv('BAYERNPORTAL_BASE_URL')) {
             config()->set('bayernportal.base_url', $baseUrl);
         }
+
+        if (getenv('BAYERNPORTAL_RECORD_FIXTURES')) {
+            app()->extend(
+                Rathauslotse\BayernPortal\Contracts\Connector::class,
+                fn (Rathauslotse\BayernPortal\Contracts\Connector $connector) => new Rathauslotse\BayernPortal\Tests\Support\RecordingConnector($connector, __DIR__.'/recorded'),
+            );
+        }
     })
     ->in('Integration');
+
+pest()->extend(TestCase::class)->group('contract')->in('Contract');
+
+/**
+ * Skip a live test unless heavy (unpaginated, very large) requests are allowed.
+ */
+function requiresHeavyRequests(): void
+{
+    if (! getenv('BAYERNPORTAL_INTEGRATION_HEAVY')) {
+        test()->markTestSkipped('Very large response. Set BAYERNPORTAL_INTEGRATION_HEAVY=1 to run it.');
+    }
+}
+
+/**
+ * Municipality used by the live suite (default: Munich).
+ */
+function liveMunicipalityKey(): string
+{
+    return getenv('BAYERNPORTAL_TEST_MUNICIPALITY_KEY') ?: '09162000';
+}
 
 /**
  * Decoded JSON fixture from tests/Fixtures.
@@ -44,7 +77,7 @@ pest()->extend(TestCase::class)
  */
 function jsonFixture(string $name): array
 {
-    return json_decode((string) file_get_contents(__DIR__.'/Fixtures/'.$name.'.json'), true, 512, JSON_THROW_ON_ERROR);
+    return json_decode((string) file_get_contents(__DIR__.'/../resources/fixtures/'.$name.'.json'), true, 512, JSON_THROW_ON_ERROR);
 }
 
 /**
