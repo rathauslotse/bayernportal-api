@@ -1,0 +1,13 @@
+{
+  "onlineverfahren": {
+    "onlineVerfahren": [
+      {
+        "id": 52,
+        "kurzbeschreibung": "Elektronische Wohnsitzanmeldung",
+        "url": "https://online.example/anmeldung",
+        "langbeschreibung": "Anmeldung mit Online-Ausweisfunktion",
+        "leistungen": { "leistung": { "leistungId": 1030, "leistungBezeichnung": "Wohnsitz anmelden", "leistungUrl": "https://www.bayernportal.de/dokumente/leistung/1030" } }
+      }
+    ]
+  }
+}

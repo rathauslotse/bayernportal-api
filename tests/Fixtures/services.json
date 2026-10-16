@@ -1,0 +1,22 @@
+{
+  "leistungen": {
+    "leistung": [
+      {
+        "id": 1010,
+        "letzteAenderung": "2026-08-12T10:15:00+02:00",
+        "bezeichnung": "Personalausweis beantragen",
+        "url": "https://www.bayernportal.de/dokumente/leistung/1010",
+        "synonyme": { "synonym": [ "Perso", "Ausweis" ] },
+        "lebenslagen": { "lebenslage": [ { "id": "10000100", "bezeichnung": "Ausweise und Dokumente" } ] }
+      },
+      {
+        "id": 1030,
+        "letzteAenderung": "2026-05-02T08:00:00+02:00",
+        "bezeichnung": "Wohnsitz anmelden",
+        "url": "https://www.bayernportal.de/dokumente/leistung/1030",
+        "synonyme": { "synonym": "Ummeldung" },
+        "lebenslagen": { "lebenslage": { "id": "10000300", "bezeichnung": "Umzug" } }
+      }
+    ]
+  }
+}

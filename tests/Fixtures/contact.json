@@ -1,0 +1,26 @@
+{
+  "ansprechpartner": {
+    "ap": [
+      {
+        "ansprechpartnerId": 9001,
+        "anrede": "Frau",
+        "akademischerGrad": "Dr.",
+        "vorname": "Maria",
+        "nachname": "Huber",
+        "funktion": "Sachgebietsleitung",
+        "email": "maria.huber@muenchen.example",
+        "zimmer": "2.14",
+        "sortierreihenfolge": 1,
+        "behoerdeId": 4711,
+        "behoerdeBezeichnung": "Kreisverwaltungsreferat München",
+        "gebaeudeId": 801,
+        "gebaeudeBezeichnung": "Bürgerbüro Ruppertstraße",
+        "telefonLandvorwahl": "+49",
+        "telefonOrtsvorwahl": "089",
+        "telefonAnlage": "233",
+        "telefonDurchwahl": "96010",
+        "leistungen": { "lg": [ { "id": 1010, "bezeichnung": "Personalausweis beantragen" }, { "id": 1020, "bezeichnung": "Reisepass beantragen" } ] }
+      }
+    ]
+  }
+}

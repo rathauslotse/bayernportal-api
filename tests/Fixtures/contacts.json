@@ -1,0 +1,8 @@
+{
+  "ansprechpartner": {
+    "ap": [
+      { "ansprechpartnerId": 9001, "vorname": "Maria", "nachname": "Huber", "behoerdeId": 4711, "behoerdeBezeichnung": "Kreisverwaltungsreferat München", "gebaeudeId": 801, "gebaeudeBezeichnung": "Bürgerbüro Ruppertstraße" },
+      { "ansprechpartnerId": 9002, "vorname": "Jonas", "nachname": "Bauer", "behoerdeId": 4711, "behoerdeBezeichnung": "Kreisverwaltungsreferat München", "gebaeudeId": 801, "gebaeudeBezeichnung": "Bürgerbüro Ruppertstraße" }
+    ]
+  }
+}

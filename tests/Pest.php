@@ -36,3 +36,13 @@ pest()->extend(TestCase::class)
         }
     })
     ->in('Integration');
+
+/**
+ * Decoded JSON fixture from tests/Fixtures.
+ *
+ * @return array<array-key, mixed>
+ */
+function jsonFixture(string $name): array
+{
+    return json_decode((string) file_get_contents(__DIR__.'/Fixtures/'.$name.'.json'), true, 512, JSON_THROW_ON_ERROR);
+}

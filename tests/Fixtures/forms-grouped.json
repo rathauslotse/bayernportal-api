@@ -1,0 +1,24 @@
+{
+  "formulare": {
+    "leistungMitFormularen": [
+      {
+        "leistungId": 1010,
+        "leistungBezeichnung": "Personalausweis beantragen",
+        "leistungUrl": "https://www.bayernportal.de/dokumente/leistung/1010",
+        "formulare": {
+          "formular": [
+            { "id": 41, "kurzbeschreibung": "Antrag auf Ausstellung eines Personalausweises", "url": "https://formulare.example/41.pdf", "schriftformErfordernis": { "id": "2", "beschreibung": "Unterschrift und persönliches Erscheinen erforderlich" }, "vorausfuellbar": true }
+          ]
+        }
+      },
+      {
+        "leistungId": 1030,
+        "leistungBezeichnung": "Wohnsitz anmelden",
+        "leistungUrl": "https://www.bayernportal.de/dokumente/leistung/1030",
+        "formulare": {
+          "formular": { "id": 42, "kurzbeschreibung": "Meldeschein", "url": "https://formulare.example/42.pdf", "schriftformErfordernis": { "id": "1", "beschreibung": "Unterschrift erforderlich" }, "vorausfuellbar": false }
+        }
+      }
+    ]
+  }
+}

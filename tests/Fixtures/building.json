@@ -1,0 +1,36 @@
+{
+  "BehoerdenGebaeude": {
+    "behoerdeId": 4711,
+    "gebaeudeId": 801,
+    "bezeichnung": "Bürgerbüro Ruppertstraße",
+    "hausanschriftPLZ": "80337",
+    "hausanschriftOrt": "München",
+    "hausanschriftStrasse": "Ruppertstraße 19",
+    "postanschriftPLZ": "80313",
+    "postanschriftOrt": "München",
+    "postanschriftStrasse": "Postfach 20 13 13",
+    "sortierreihenfolge": 1,
+    "telefonLandvorwahl": "+49",
+    "telefonOrtsvorwahl": "089",
+    "telefonAnlage": "233",
+    "telefonDurchwahl": "96000",
+    "faxLandvorwahl": "0049",
+    "faxOrtsvorwahl": "089",
+    "faxAnlage": "233",
+    "faxDurchwahl": "96001",
+    "oeffnungszeiten": {
+      "nachVereinbarung": false,
+      "sonderzeiten": "An Feiertagen geschlossen.",
+      "oeffnungszeit": [
+        {
+          "zeitangabe": [
+            { "typ": "MO", "vonVormittags": "07:30", "bisVormittags": "12:00", "vonNachmittags": "", "bisNachmittags": "" },
+            { "typ": "DI", "vonVormittags": "08:30", "bisVormittags": "12:00", "vonNachmittags": "14:00", "bisNachmittags": "18:00" },
+            { "typ": "FR", "vonVormittags": "07:30", "bisVormittags": "12:00", "vonNachmittags": "", "bisNachmittags": "" }
+          ]
+        }
+      ]
+    },
+    "behoerdenAnsprechpartnerZuordnungen": { "ansprechpartner": [ { "id": 9001 }, { "id": 9002 } ] }
+  }
+}

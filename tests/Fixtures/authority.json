@@ -1,0 +1,15 @@
+{
+  "behoerde": {
+    "@id": 4711,
+    "bezeichnung": "Kreisverwaltungsreferat München",
+    "behoerdenart": "Referat",
+    "behoerdengruppe": "Kommunalverwaltung",
+    "sortierreihenfolge": 5,
+    "kurzbeschreibung": "Bürgerbüro, Ausländerbehörde und Verkehrswesen",
+    "email": "kvr@muenchen.example",
+    "website": "https://stadt.muenchen.example/kvr",
+    "logoLangtext": { "$": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=", "@mimetype": "image/png" },
+    "behoerdenGebaeudeZuordnungen": { "gebaeude": { "@id": 801 } },
+    "linkSicheresKontaktformular": "https://formulare.example/kontakt/4711"
+  }
+}

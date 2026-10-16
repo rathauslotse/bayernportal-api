@@ -1,0 +1,8 @@
+{
+  "behoerden": {
+    "behoerde": [
+      { "id": 4711, "bezeichnung": "Kreisverwaltungsreferat München", "behoerdenart": "Referat", "behoerdengruppe": "Kommunalverwaltung", "sortierreihenfolge": 5 },
+      { "id": 4712, "bezeichnung": "Sozialreferat München", "behoerdenart": "Referat", "behoerdengruppe": "Kommunalverwaltung", "sortierreihenfolge": 6 }
+    ]
+  }
+}

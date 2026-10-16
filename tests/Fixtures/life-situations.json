@@ -1,0 +1,10 @@
+{
+  "lebenslagen": {
+    "lebenslage": [
+      { "id": "10000000", "bezeichnung": "Persönliche Dokumente", "kurzbeschreibung": "Ausweise, Pässe und Bescheinigungen", "kategorie": "buerger", "vorgaengerId": "0", "stand": "2026-01-15T00:00:00+01:00" },
+      { "id": "10000100", "bezeichnung": "Ausweise und Dokumente", "kurzbeschreibung": "Personalausweis, Reisepass", "kategorie": "buerger", "vorgaengerId": "10000000", "stand": "2026-01-15T00:00:00+01:00", "leistungen": { "leistung": [ { "id": 1010, "bezeichnung": "Personalausweis beantragen" }, { "id": 1020, "bezeichnung": "Reisepass beantragen" } ] } },
+      { "id": "10000300", "bezeichnung": "Umzug", "kurzbeschreibung": "An-, Um- und Abmeldung", "kategorie": "buerger", "vorgaengerId": "10000000", "stand": "2026-01-15T00:00:00+01:00", "synonyme": { "synonym": [ "Wohnungswechsel" ] }, "leistungen": { "leistung": { "id": 1030, "bezeichnung": "Wohnsitz anmelden" } } },
+      { "id": "20000000", "bezeichnung": "Gründung", "kurzbeschreibung": "Unternehmen gründen", "kategorie": "unternehmer", "vorgaengerId": "", "stand": "2026-01-15T00:00:00+01:00" }
+    ]
+  }
+}

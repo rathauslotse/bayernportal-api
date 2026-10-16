@@ -1,0 +1,22 @@
+{
+  "dienststelle": {
+    "id": 4711,
+    "bezeichnung": "Landeshauptstadt München",
+    "bezeichnungZusatz": "Kreisverwaltungsreferat",
+    "behoerdenart": "Gemeinde",
+    "behoerdengruppe": "Kommunalverwaltung",
+    "sortierreihenfolge": 10,
+    "kurzbeschreibung": "Stadtverwaltung der Landeshauptstadt München",
+    "langbeschreibung": "<p>Die Stadtverwaltung ist Ansprechpartner für alle kommunalen Angelegenheiten.</p>",
+    "email": "kvr@muenchen.example",
+    "deMail": "kvr@muenchen.de-mail.example",
+    "website": "https://stadt.muenchen.example",
+    "logo": { "value": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=", "mimetype": "image/png", "alt": "Stadtwappen", "title": "Wappen München", "quelle": "Landeshauptstadt München" },
+    "behoerdeZuordnungen": { "behoerde": [ { "id": 4712 }, { "id": 4713 } ] },
+    "behoerdenGebaeudeZuordnungen": { "gebaeude": [ { "id": 801 }, { "id": 802 } ] },
+    "linkSicheresKontaktformular": "https://formulare.example/kontakt/4711",
+    "dienststellenschluessel": "0916200",
+    "dienststelleLfdNr": 0,
+    "mitgliedVonVerwaltungsgemeinschaft": null
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "leistung": [
+    { "id": 1010, "bezeichnung": "Personalausweis beantragen" },
+    { "id": 1020, "bezeichnung": "Reisepass beantragen" },
+    { "id": 1030, "bezeichnung": "Wohnsitz anmelden" }
+  ]
+}

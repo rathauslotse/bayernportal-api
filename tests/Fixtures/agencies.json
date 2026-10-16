@@ -1,0 +1,35 @@
+{
+  "dienststellen": {
+    "dienststelle": [
+      {
+        "id": 4711,
+        "bezeichnung": "Landeshauptstadt München",
+        "behoerdenart": "Gemeinde",
+        "behoerdengruppe": "Kommunalverwaltung",
+        "sortierreihenfolge": 10,
+        "dienststellenschluessel": "0916200",
+        "dienststelleLfdNr": 0
+      },
+      {
+        "id": 5120,
+        "bezeichnung": "Gemeinde Hallbergmoos",
+        "behoerdenart": "Gemeinde",
+        "behoerdengruppe": "Kommunalverwaltung",
+        "sortierreihenfolge": 20,
+        "dienststellenschluessel": "0917812",
+        "dienststelleLfdNr": 0,
+        "mitgliedVonVerwaltungsgemeinschaft": "Verwaltungsgemeinschaft Beispiel"
+      },
+      {
+        "id": 5121,
+        "bezeichnung": "Landratsamt Freising",
+        "bezeichnungZusatz": "Außenstelle Moosburg",
+        "behoerdenart": "Landratsamt",
+        "behoerdengruppe": "Staatliche Verwaltung",
+        "sortierreihenfolge": 30,
+        "dienststellenschluessel": "0917800",
+        "dienststelleLfdNr": 1
+      }
+    ]
+  }
+}

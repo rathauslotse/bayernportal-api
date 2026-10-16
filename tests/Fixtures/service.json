@@ -1,0 +1,10 @@
+{
+  "leistung": {
+    "id": 1010,
+    "letzteAenderung": "2026-08-12T10:15:00+02:00",
+    "bezeichnung": "Personalausweis beantragen",
+    "url": "https://www.bayernportal.de/dokumente/leistung/1010",
+    "synonyme": { "synonym": [ "Perso", "Ausweis" ] },
+    "lebenslagen": { "lebenslage": [ { "id": "10000100", "bezeichnung": "Ausweise und Dokumente" } ] }
+  }
+}

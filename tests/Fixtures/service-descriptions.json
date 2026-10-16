@@ -1,0 +1,8 @@
+{
+  "leistungsbeschreibungen": {
+    "leistungsbeschreibung": [
+      { "id": 1010, "bezeichnung": "Personalausweis beantragen", "url": "https://www.bayernportal.de/dokumente/leistung/1010", "status": "live", "kurzbeschreibung": "Der Personalausweis ist ein amtliches Ausweisdokument.", "stand": "2026-07-01T00:00:00+02:00", "verantwortlicheBehoerde": "Bayerisches Staatsministerium des Innern, für Sport und Integration" },
+      { "id": 1030, "bezeichnung": "Wohnsitz anmelden", "url": "https://www.bayernportal.de/dokumente/leistung/1030", "status": "working", "kurzbeschreibung": "Wer eine Wohnung bezieht, muss sich anmelden.", "stand": "2026-05-02T00:00:00+02:00", "verantwortlicheBehoerde": "Bayerisches Staatsministerium des Innern, für Sport und Integration" }
+    ]
+  }
+}

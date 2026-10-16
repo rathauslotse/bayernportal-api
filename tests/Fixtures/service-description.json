@@ -1,0 +1,80 @@
+{
+  "leistungsbeschreibung": {
+    "id": 1010,
+    "letzteAenderung": "2026-08-12T10:15:00+02:00",
+    "bezeichnung": { "value": "Personalausweis beantragen" },
+    "url": "https://www.bayernportal.de/dokumente/leistung/1010",
+    "synonyme": { "synonym": [ "Perso", "Ausweis" ] },
+    "lebenslagen": { "lebenslage": [ { "id": "10000100", "bezeichnung": "Ausweise und Dokumente" } ] },
+    "status": "live",
+    "kurzbeschreibung": "Der Personalausweis ist ein amtliches Ausweisdokument.",
+    "langbeschreibung": "<p>Deutsche Staatsangehörige ab 16 Jahren müssen einen gültigen Ausweis besitzen.</p>",
+    "voraussetzungen": "<p>Deutsche Staatsangehörigkeit</p>",
+    "verfahrensablauf": "<p>Termin vereinbaren und persönlich vorsprechen.</p>",
+    "hinweise": "<p>Die Bearbeitung dauert etwa drei Wochen.</p>",
+    "fristen": "<p>Keine</p>",
+    "bearbeitungsdauer": "ca. 3 Wochen",
+    "unterlagen": {
+      "unterlage": [
+        { "id": 31, "kurzbeschreibung": "Biometrisches Lichtbild" },
+        { "id": 32, "kurzbeschreibung": "Bisheriger Ausweis", "langbeschreibung": "Falls vorhanden", "leistungId": 1020, "leistungUrl": "https://www.bayernportal.de/dokumente/leistung/1020" }
+      ]
+    },
+    "kosten": "37,00 Euro (ab 24 Jahren)",
+    "formulare": {
+      "formular": [
+        {
+          "id": 41,
+          "kurzbeschreibung": "Antrag auf Ausstellung eines Personalausweises",
+          "url": "https://formulare.example/41.pdf",
+          "langbeschreibung": "Vordruck zum Ausfüllen",
+          "schriftformErfordernis": { "id": "2", "beschreibung": "Unterschrift und persönliches Erscheinen erforderlich" },
+          "vorausfuellbar": true
+        }
+      ]
+    },
+    "onlineVerfahren": {
+      "onlineVerfahren": { "id": 51, "kurzbeschreibung": "Online-Terminvereinbarung", "url": "https://termine.example/kvr" }
+    },
+    "rechtsvorschriften": {
+      "rechtsvorschrift": [
+        { "id": 61, "kurzbeschreibung": "§ 9 Personalausweisgesetz (PAuswG)", "url": "https://www.gesetze-im-internet.de/pauswg/__9.html" }
+      ]
+    },
+    "rechtsbehelf": { "kurzbeschreibung": "Widerspruch oder Klage", "leistungId": 2000, "leistungBezeichnung": "Widerspruch einlegen", "leistungUrl": "https://www.bayernportal.de/dokumente/leistung/2000" },
+    "links": { "link": [ { "id": 71, "kurzbeschreibung": "Informationen des BMI", "url": "https://www.personalausweisportal.example" } ] },
+    "verwandteLeistungen": {
+      "verwandteLeistung": [
+        { "id": 1020, "bezeichnung": "Reisepass beantragen", "url": "https://www.bayernportal.de/dokumente/leistung/1020", "direktVerwandt": true },
+        { "id": 1040, "bezeichnung": "Kinderreisepass beantragen", "url": "https://www.bayernportal.de/dokumente/leistung/1040", "direktVerwandt": false }
+      ]
+    },
+    "stand": "2026-07-01T00:00:00+02:00",
+    "verantwortlicheBehoerde": "Bayerisches Staatsministerium des Innern, für Sport und Integration",
+    "regionaleErgaenzungen": { "regionaleErgaenzung": [ { "id": 81 } ] },
+    "zustaendigkeiten": {
+      "zustaendig": [
+        {
+          "behoerdId": 4711,
+          "bezeichnung": "Kreisverwaltungsreferat München",
+          "anschriften": {
+            "gebaeude": [
+              {
+                "gebaeudeId": 801,
+                "hausanschrift": { "strasse": "Ruppertstraße 19", "plz": "80337", "ort": "München" },
+                "postanschrift": { "strasse": "Postfach 20 13 13", "plz": "80313", "ort": "München" },
+                "telefon": "+49 89 233-96000",
+                "fax": "+49 89 233-96001",
+                "behoerdenAnsprechpartnerZuordnungen": { "ansprechpartner": [ { "id": 9001 } ] }
+              }
+            ]
+          },
+          "email": "kvr@muenchen.example",
+          "website": "https://stadt.muenchen.example/kvr",
+          "bwwlink": "https://www.bayernportal.de/dokumente/behoerde/4711",
+          "linkSicheresKontaktformular": "https://formulare.example/kontakt/4711"
+        }
+      ]
+    }
+  }
+}

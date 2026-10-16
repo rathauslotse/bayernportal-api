@@ -1,0 +1,29 @@
+{
+  "ansprechpartner": {
+    "behoerdeId": 4711,
+    "gebaeudeId": 801,
+    "ansprechpartnerId": 9001,
+    "anrede": "Frau",
+    "amtsbezeichnung": "Verwaltungsamtfrau",
+    "akademischerGrad": "Dr.",
+    "vorname": "Maria",
+    "nachname": "Huber",
+    "funktion": "Sachgebietsleitung",
+    "stellenbezeichnung": "Leitung Bürgerbüro",
+    "email": "maria.huber@muenchen.example",
+    "zimmer": "2.14",
+    "sortierreihenfolge": 1,
+    "telefonLandvorwahl": "+49",
+    "telefonOrtsvorwahl": "089",
+    "telefonAnlage": "233",
+    "telefonDurchwahl": "96010",
+    "mobilLandvorwahl": "+49",
+    "mobilOrtsvorwahl": "0151",
+    "mobilNummer": "12345678",
+    "sprechzeiten": {
+      "nachVereinbarung": true,
+      "sonderzeiten": "",
+      "oeffnungszeit": { "zeitangabe": { "typ": "MI", "vonVormittags": "09:00", "bisVormittags": "11:00", "vonNachmittags": "", "bisNachmittags": "" } }
+    }
+  }
+}
