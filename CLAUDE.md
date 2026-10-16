@@ -11,7 +11,7 @@ Common ones: ✨ feature · 🐛 fix · ♻️ refactor · 📝 docs · 🔧 con
 
 # Project conventions
 
-- Package `rathauslotse/bayernportal-api`, namespace `Rathauslotse\BayernPortal`. PHP ^8.3, Laravel 11–13.
+- Package `rathauslotse/bayernportal-api`, namespace `Rathauslotse\BayernPortal`. PHP ^8.3, Laravel 12–13 (Laravel 11 is EOL and dropped).
 - **No German identifiers.** Classes, methods, properties, parameters and enum cases are English. The German REST names appear only in the HTTP layer (paths, query parameters) and in payload mapping. `docs/glossary.md` is the single source of truth for German → English names; extend it whenever a new term is mapped.
 - Development happens on `main` until 1.0.0. The first published version is **1.0.0**.
 - Before committing, run `composer lint`, `composer analyse` and `composer test`. All must pass.
