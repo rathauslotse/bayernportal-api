@@ -1,0 +1,13 @@
+/vendor/
+/composer.lock
+/.phpunit.cache/
+/build/
+/coverage/
+.phpunit.result.cache
+.php-cs-fixer.cache
+.env
+.env.testing
+.idea/
+.vscode/
+.DS_Store
+/tests/Fixtures/recorded/
