@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <defs>
+    <pattern id="rauten" width="120" height="160" patternUnits="userSpaceOnUse" patternTransform="rotate(-22)">
+      <rect width="120" height="160" fill="#E4EEF8"/>
+      <path d="M60 0 L120 80 L60 160 L0 80 Z" fill="#C9DCF0"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1200" fill="#F4F8FC"/>
+  <rect x="0" y="0" width="1600" height="420" fill="url(#rauten)"/>
+  <rect x="0" y="420" width="1600" height="12" fill="#C9DCF0"/>
+
+  <!-- town hall -->
+  <g fill="#2F6FB0">
+    <rect x="300" y="620" width="420" height="340" rx="6"/>
+    <path d="M280 630 L510 500 L740 630 Z"/>
+    <rect x="455" y="360" width="110" height="200"/>
+    <path d="M440 370 L510 280 L580 370 Z"/>
+  </g>
+  <circle cx="510" cy="440" r="34" fill="#F4F8FC"/>
+  <path d="M510 440 L510 418 M510 440 L526 450" stroke="#2F6FB0" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#F4F8FC">
+    <rect x="350" y="690" width="70" height="90" rx="35"/>
+    <rect x="475" y="690" width="70" height="90" rx="35"/>
+    <rect x="600" y="690" width="70" height="90" rx="35"/>
+    <rect x="465" y="840" width="90" height="120" rx="45"/>
+  </g>
+  <rect x="240" y="960" width="540" height="22" rx="11" fill="#244F7E"/>
+
+  <!-- connection -->
+  <path d="M780 790 C 900 790, 920 640, 1040 640" fill="none" stroke="#F2B84B" stroke-width="18" stroke-linecap="round"/>
+  <path d="M780 790 C 900 790, 920 790, 1040 790" fill="none" stroke="#F2B84B" stroke-width="18" stroke-linecap="round"/>
+  <path d="M780 790 C 900 790, 920 940, 1040 940" fill="none" stroke="#F2B84B" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="780" cy="790" r="26" fill="#F2B84B"/>
+
+  <!-- typed data cards -->
+  <g>
+    <rect x="1050" y="585" width="320" height="110" rx="24" fill="#FFFFFF" stroke="#2F6FB0" stroke-width="8"/>
+    <circle cx="1110" cy="640" r="22" fill="#2F6FB0"/>
+    <rect x="1155" y="622" width="170" height="14" rx="7" fill="#C9DCF0"/>
+    <rect x="1155" y="648" width="110" height="14" rx="7" fill="#C9DCF0"/>
+
+    <rect x="1050" y="735" width="320" height="110" rx="24" fill="#FFFFFF" stroke="#2F6FB0" stroke-width="8"/>
+    <rect x="1088" y="768" width="44" height="44" rx="10" fill="#2F6FB0"/>
+    <rect x="1155" y="772" width="170" height="14" rx="7" fill="#C9DCF0"/>
+    <rect x="1155" y="798" width="130" height="14" rx="7" fill="#C9DCF0"/>
+
+    <rect x="1050" y="885" width="320" height="110" rx="24" fill="#FFFFFF" stroke="#2F6FB0" stroke-width="8"/>
+    <path d="M1110 918 L1134 958 L1086 958 Z" fill="#2F6FB0"/>
+    <rect x="1155" y="922" width="170" height="14" rx="7" fill="#C9DCF0"/>
+    <rect x="1155" y="948" width="90" height="14" rx="7" fill="#C9DCF0"/>
+  </g>
+</svg>
