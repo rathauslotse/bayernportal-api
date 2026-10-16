@@ -10,4 +10,4 @@
 .idea/
 .vscode/
 .DS_Store
-/tests/Fixtures/recorded/
+/tests/recorded/

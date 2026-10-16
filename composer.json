@@ -47,6 +47,7 @@
     "scripts": {
         "test": "pest --exclude-group=integration",
         "test:integration": "pest --group=integration",
+        "test:contract": "pest --group=contract",
         "test:coverage": "pest --exclude-group=integration --coverage --min=90",
         "analyse": "phpstan analyse --memory-limit=1G",
         "format": "pint",
