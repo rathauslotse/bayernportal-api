@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Rathauslotse\BayernPortal;
 
+use Illuminate\Contracts\Cache\Factory as CacheFactory;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\Client\Factory;
 use Illuminate\Support\ServiceProvider;
+use Rathauslotse\BayernPortal\Cache\CachingConnector;
 use Rathauslotse\BayernPortal\Contracts\Connector;
 use Rathauslotse\BayernPortal\Http\ConnectorOptions;
 use Rathauslotse\BayernPortal\Http\HttpConnector;
@@ -19,9 +21,27 @@ class BayernPortalServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/bayernportal.php', 'bayernportal');
 
         $this->app->singleton(Connector::class, static function (Application $app): Connector {
-            return new HttpConnector(
+            $config = self::config($app);
+
+            $connector = new HttpConnector(
                 $app->make(Factory::class),
-                ConnectorOptions::fromConfig(self::config($app)),
+                ConnectorOptions::fromConfig($config),
+            );
+
+            $cache = is_array($config['cache'] ?? null) ? $config['cache'] : [];
+
+            if (! filter_var($cache['enabled'] ?? false, FILTER_VALIDATE_BOOL)) {
+                return $connector;
+            }
+
+            $store = is_string($cache['store'] ?? null) && $cache['store'] !== '' ? $cache['store'] : null;
+            $prefix = is_string($cache['prefix'] ?? null) && $cache['prefix'] !== '' ? $cache['prefix'] : 'bayernportal';
+
+            return new CachingConnector(
+                $connector,
+                $app->make(CacheFactory::class)->store($store),
+                is_numeric($cache['ttl'] ?? null) ? max(1, (int) $cache['ttl']) : 86400,
+                $prefix,
             );
         });
 

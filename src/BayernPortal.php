@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Rathauslotse\BayernPortal;
 
+use Rathauslotse\BayernPortal\Cache\CachingConnector;
 use Rathauslotse\BayernPortal\Contracts\Connector;
 use Rathauslotse\BayernPortal\Resources\AgencyResource;
 use Rathauslotse\BayernPortal\Resources\AuthorityResource;
@@ -85,6 +86,28 @@ final class BayernPortal
     public function forMunicipality(?string $municipalityKey): self
     {
         return new self($this->connector, $municipalityKey);
+    }
+
+    /**
+     * Return a client that bypasses the response cache (if enabled).
+     */
+    public function withoutCache(): self
+    {
+        if (! $this->connector instanceof CachingConnector) {
+            return $this;
+        }
+
+        return new self($this->connector->uncached(), $this->municipalityKey);
+    }
+
+    /**
+     * Invalidate all cached responses. Does nothing when caching is disabled.
+     */
+    public function flushCache(): void
+    {
+        if ($this->connector instanceof CachingConnector) {
+            $this->connector->flush();
+        }
     }
 
     /**

@@ -15,6 +15,8 @@ use Rathauslotse\BayernPortal\BayernPortal as Client;
  * @method static \Rathauslotse\BayernPortal\Resources\ServiceDescriptionResource serviceDescriptions()
  * @method static \Rathauslotse\BayernPortal\Resources\LifeSituationResource lifeSituations()
  * @method static Client forMunicipality(?string $municipalityKey)
+ * @method static Client withoutCache()
+ * @method static void flushCache()
  * @method static string|null municipalityKey()
  * @method static \Rathauslotse\BayernPortal\Contracts\Connector connector()
  *
