@@ -6,6 +6,8 @@ All exceptions extend `Rathauslotse\BayernPortal\Exceptions\BayernPortalExceptio
 BayernPortalException
 ├── InvalidParameterException       invalid argument, nothing was sent
 ├── ConnectionException             DNS, TLS, timeout … (after retries)
+├── UnsupportedByScraperException   scraper driver: call has no website equivalent
+├── ScraperBlockedException         scraper driver: rate limit or bot check
 └── ResponseException               unsuccessful HTTP response
     ├── RequestException            4xx, e.g. 400
     │   ├── AuthenticationException 401, 403
@@ -54,6 +56,10 @@ These checks run before a request is sent:
 ## Retries
 
 Connection errors and 5xx responses are retried `retry.times` times (default 2) with `retry.sleep_ms` between attempts. 4xx responses are never retried. See [Configuration](configuration.md).
+
+## Scraper driver
+
+With the [scraper driver](scraper.md), unknown pages (the website answers them with HTTP 400 and "Seite nicht gefunden") raise `NotFoundException`. Calls the website cannot serve raise `UnsupportedByScraperException` before any request is sent. A rate limit (HTTP 429) or a captcha page raises `ScraperBlockedException`.
 
 ## Invalid JSON
 

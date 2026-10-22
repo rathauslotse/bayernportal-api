@@ -97,6 +97,22 @@ Environment variables, read from the shell or `.env.testing`:
 
 The suite discovers IDs dynamically (first agency, first authority with buildings, …), so it does not depend on specific records.
 
+### Scraper tests
+
+The scraper driver's feature tests serve HTML pages recorded from www.bayernportal.de (Stadt Haar). They live in `tests/Fixtures/scraper/` and are trimmed of scripts, navigation and cookie banners. When the website changes, re-record a page and keep the file name.
+
+`tests/ScraperLive` runs a small live suite against the real website. It needs no credentials and sends about 15 throttled requests:
+
+```bash
+composer test:scraper      # sets BAYERNPORTAL_SCRAPER_LIVE=1
+```
+
+To regenerate the bundled municipality index in this repository:
+
+```bash
+vendor/bin/testbench bayernportal:scrape-index --output=resources/scraper/municipalities.json
+```
+
 ### Contract check against real data
 
 The JSON shape of the REST API is not documented. The fixtures and mappers are derived from the SOAP XML schema. After recording live responses, check them offline:

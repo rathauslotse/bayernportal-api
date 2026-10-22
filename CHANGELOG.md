@@ -18,3 +18,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Retries on connection errors and 5xx responses.
 - `BayernPortal::fake()` with bundled fixtures and request assertions.
 - Live integration test suite with response recording and an offline contract check.
+- Scraper driver (`BAYERNPORTAL_DRIVER=scraper`) that reads www.bayernportal.de when no API credentials are available: municipality-centric calls, throttling, bot detection, a bundled municipality index and the `bayernportal:scrape-index` command. See `docs/scraper.md`.

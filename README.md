@@ -31,7 +31,7 @@ $description->forms[0]->url;                   // "https://…/antrag.pdf"
 
 - PHP 8.3 or newer
 - Laravel 12 or 13
-- BayernPortal web service credentials ([how to get them](docs/authentication.md))
+- BayernPortal web service credentials ([how to get them](docs/authentication.md)), or the [scraper driver](docs/scraper.md) without credentials
 
 ## Installation
 
@@ -44,6 +44,12 @@ The service provider and the `BayernPortal` facade are registered automatically.
 ```dotenv
 BAYERNPORTAL_USERNAME=your-user
 BAYERNPORTAL_PASSWORD=your-password
+```
+
+No credentials yet? Read the public website instead. This is slower and supports fewer calls, see [Scraper driver](docs/scraper.md):
+
+```dotenv
+BAYERNPORTAL_DRIVER=scraper
 ```
 
 Optionally publish the config file:
@@ -88,7 +94,7 @@ Without the facade, inject `Rathauslotse\BayernPortal\BayernPortal`.
 |---|---|
 | Getting started | [Installation](docs/installation.md) · [Configuration](docs/configuration.md) · [Authentication](docs/authentication.md) |
 | Endpoints | [Agencies](docs/agencies.md) · [Authorities & buildings](docs/authorities.md) · [Contacts](docs/contacts.md) · [Services](docs/services.md) · [Service descriptions](docs/service-descriptions.md) · [Life situations](docs/life-situations.md) |
-| Concepts | [Municipality scope](docs/municipality-scope.md) · [Pagination](docs/pagination.md) · [Caching](docs/caching.md) · [Error handling](docs/error-handling.md) |
+| Concepts | [Municipality scope](docs/municipality-scope.md) · [Pagination](docs/pagination.md) · [Caching](docs/caching.md) · [Error handling](docs/error-handling.md) · [Scraper driver](docs/scraper.md) |
 | Reference | [Data model](docs/data-model.md) · [Glossary (German → English)](docs/glossary.md) · [API quirks](docs/api-quirks.md) |
 | Development | [Testing](docs/testing.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) |
 

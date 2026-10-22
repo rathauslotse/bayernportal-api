@@ -26,6 +26,26 @@ The package uses English names everywhere. German appears only in HTTP paths, qu
 | Bezirksregierung | district government | |
 | Zentrale Redaktion | central editorial office | issues credentials |
 
+## Website (scraper driver)
+
+Terms that only appear on www.bayernportal.de and in the scraper's raw payloads.
+
+| German (website) | English (package) | Notes |
+|---|---|---|
+| Behördenordner | authority folder | groups authorities, e.g. "Gemeinden" (`raw['ordnerId']`) |
+| Mitarbeiter (page) | contacts page | `/dokumente/behoerde/{id}/mitarbeiter/alle` |
+| Adressen (page) | buildings page | `/dokumente/behoerde/{id}/adressen` |
+| Organigramm | organisational units | not scraped |
+| Ergänzung | regional supplement | `raw['regionaleErgaenzungen']` |
+| Ortsauswahl / Lokalisierung | localisation | website parameters `plz`, `behoerde`, `gemeinde` |
+| gemeinde (URL parameter) | website municipality id | 12 digits, not the municipality key |
+| Für Sie zuständig | responsibilities | `ServiceDescription::$responsibilities` |
+| Redaktionell verantwortlich | `responsibleAuthority` | |
+| Stand | `updatedAt` | |
+| Zweckverband | special-purpose association | `raw['mitgliedschaften']` |
+| Landratsamt | district office | `raw['uebergeordneteBehoerdeId']` |
+| Einwohnerzahl | population | not mapped |
+
 ## Query parameters
 
 | REST parameter | Package parameter |
