@@ -7,6 +7,7 @@ namespace Rathauslotse\BayernPortal\Facades;
 use Illuminate\Http\Client\Factory;
 use Illuminate\Support\Facades\Facade;
 use Rathauslotse\BayernPortal\BayernPortal as Client;
+use Rathauslotse\BayernPortal\Contracts\Connector;
 use Rathauslotse\BayernPortal\Http\ConnectorOptions;
 use Rathauslotse\BayernPortal\Testing\BayernPortalFake;
 
@@ -40,6 +41,15 @@ class BayernPortal extends Facade
     public static function fake(array $responses = []): BayernPortalFake
     {
         $baseUrl = config('bayernportal.base_url');
+
+        // The fake answers REST requests, so apps on the scraper driver are
+        // switched to the HTTP connector for the duration of the test.
+        if (config('bayernportal.driver', 'api') !== 'api') {
+            config()->set('bayernportal.driver', 'api');
+            app()->forgetInstance(Connector::class);
+            app()->forgetInstance(Client::class);
+            static::clearResolvedInstance(Client::class);
+        }
 
         $fake = new BayernPortalFake(
             app(Factory::class),
