@@ -6,7 +6,7 @@ The REST API needs credentials from the Zentrale Redaktion (see [Authentication]
 BAYERNPORTAL_DRIVER=scraper
 ```
 
-The REST API remains the default (`BAYERNPORTAL_DRIVER=api`). The package never switches drivers on its own.
+The REST API remains the default (`BAYERNPORTAL_DRIVER=api`). The package never switches drivers on its own. `BayernPortal::usesScraper()` tells you which driver a client uses.
 
 ## How it works
 
@@ -71,7 +71,7 @@ The website identifies municipalities by its own authority ids. The 8-digit muni
 - the municipality key without its leading zero (`09184123` → `9184123`),
 - the municipality key without its last digit (`0916200` for Munich), but only when exactly one municipality matches. In practice that holds for independent cities only (58 of 2,056 keys).
 
-How the REST API derives agency keys is not documented, so check the result for your municipality. The municipality key is always available as `$agency->raw['gemeindekennziffer']`.
+How the REST API derives agency keys is not documented, so check the result for your municipality. With credentials, the parity test settles it (see [Testing](testing.md#scraper-tests)). The municipality key is always available as `$agency->raw['gemeindekennziffer']`.
 
 Rebuild the index when municipalities change (about 2,050 requests, ~35 minutes):
 

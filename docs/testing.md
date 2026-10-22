@@ -107,6 +107,12 @@ The scraper driver's feature tests serve HTML pages recorded from www.bayernport
 composer test:scraper      # sets BAYERNPORTAL_SCRAPER_LIVE=1
 ```
 
+`tests/Integration/ScraperParityTest.php` compares the scraper with the REST API for one municipality: the authority id, name, agency key and service ids. It needs credentials and `BAYERNPORTAL_SCRAPER_LIVE=1`. `BAYERNPORTAL_PARITY_AGENCY_KEY` selects the agency (default `9184123`, Stadt Haar):
+
+```bash
+BAYERNPORTAL_SCRAPER_LIVE=1 composer test:integration -- --filter=Parity
+```
+
 To regenerate the bundled municipality index in this repository:
 
 ```bash
