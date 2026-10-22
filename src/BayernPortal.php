@@ -12,6 +12,7 @@ use Rathauslotse\BayernPortal\Resources\ContactResource;
 use Rathauslotse\BayernPortal\Resources\LifeSituationResource;
 use Rathauslotse\BayernPortal\Resources\ServiceDescriptionResource;
 use Rathauslotse\BayernPortal\Resources\ServiceResource;
+use Rathauslotse\BayernPortal\Scraper\ScrapingConnector;
 use Rathauslotse\BayernPortal\Support\Validate;
 
 /**
@@ -116,6 +117,19 @@ final class BayernPortal
     public function municipalityKey(): ?string
     {
         return $this->municipalityKey;
+    }
+
+    /**
+     * Whether this client reads the public website (scraper driver) instead
+     * of the REST API.
+     */
+    public function usesScraper(): bool
+    {
+        $connector = $this->connector instanceof CachingConnector
+            ? $this->connector->uncached()
+            : $this->connector;
+
+        return $connector instanceof ScrapingConnector;
     }
 
     public function connector(): Connector

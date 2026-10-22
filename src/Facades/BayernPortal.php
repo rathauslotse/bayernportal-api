@@ -22,6 +22,7 @@ use Rathauslotse\BayernPortal\Testing\BayernPortalFake;
  * @method static Client withoutCache()
  * @method static void flushCache()
  * @method static string|null municipalityKey()
+ * @method static bool usesScraper()
  * @method static \Rathauslotse\BayernPortal\Contracts\Connector connector()
  *
  * @see Client

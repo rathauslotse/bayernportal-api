@@ -39,6 +39,21 @@ it('binds the scraping connector for the scraper driver', function (): void {
         ->and(app(Connector::class)->uncached())->toBeInstanceOf(ScrapingConnector::class);
 });
 
+it('reports whether the client uses the scraper', function (): void {
+    expect(BayernPortal::usesScraper())->toBeTrue();
+
+    useScraper(cache: true);
+
+    expect(BayernPortal::usesScraper())->toBeTrue();
+
+    config()->set('bayernportal.driver', 'api');
+    app()->forgetInstance(Connector::class);
+    app()->forgetInstance(Rathauslotse\BayernPortal\BayernPortal::class);
+    BayernPortal::clearResolvedInstances();
+
+    expect(BayernPortal::usesScraper())->toBeFalse();
+});
+
 it('keeps the API driver as default', function (): void {
     config()->set('bayernportal.driver', 'api');
     app()->forgetInstance(Connector::class);
