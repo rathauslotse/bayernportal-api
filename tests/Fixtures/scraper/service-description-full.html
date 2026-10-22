@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="de" class="base-font-normal ">
+<head data-ctx="/" data-publish="false" data-captchaenabled="true" data-captchasitekey="FCMI1RH79MBGRHSQ" data-captchaendpoint="https://eu-api.friendlycaptcha.eu/api/v1/puzzle">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index">
+<meta name="robots" content="follow">
+<meta name="description" content="Verwaltung digital! Beschreibungen von Leistungen der staatlichen und kommunalen Verwaltungen mit Kontaktinformationen der zuständigen Behörde.">
+<meta name="keywords" content="Personalausweis beantragen,vorläufiger Ausweis,PA,ID-Karte,Identifikation,Personalausweis / vorläufiger Personalausweis,Passersatz,ausweisen,Ausweis,amtliches Ausweisdokument,vorübergehender Personalausweis,Perso,neuen Personalausweis,Perso läuft ab,Personalausweis Gültigkeit,Perso abgelaufen,Identitätsnachweis,Identitätsdokument,nPA,amtlicher Lichtbildausweis,Personalausweis,Dokumente und Visa,Personalausweis">
+<meta property="og:image" content="/images/bayernportal.png" />
+<meta property="og:description" content="Verwaltung digital! Beschreibungen von Leistungen der staatlichen und kommunalen Verwaltungen mit Kontaktinformationen der zuständigen Behörde."/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.bayernportal.de/dokumente/leistung/8110751776">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico?ver=2" />
+<meta property="og:title" content="Personalausweis; Beantragung - BayernPortal" />
+<title>Personalausweis; Beantragung - BayernPortal</title>
+<link rel="preload" as="style" href="/styles/style.min.css?ver=4" />
+<link rel="stylesheet" href="/styles/style.min.css?ver=4" />
+<link rel="preload" as="style" href="/styles/jquery-ui/style.ui.css?ver=2" type="text/css" media="screen">
+<link href="/styles/jquery-ui/style.ui.css?ver=2" rel="stylesheet" type="text/css" media="screen">
+<link rel="preload" as="font" href="/fonts/Montserrat-VariableFont_wght.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Regular.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Bold.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Light.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="style" href="/fonts/Montserrat/Montserrat.css?family=Montserrat:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/fonts/Montserrat/Montserrat.css?family=Montserrat:wght@400;500;600&amp;display=swap">
+</head>
+<body class="overflow-hidden has-dialog">
+<noscript>
+<div id="noscriptText" class="bg-grau-hintergrund p-5 text-center border">
+<h3 class="font-sans text-primary text-base md:text-lg font-normal tracking-wide">Hinweis: Bitte aktivieren Sie JavaScript in Ihrem Browser, um den vollen Funktionsumfang dieser Seite nutzen zu können!</h3>
+</div>
+</noscript>
+<div class="overflow-hidden w-full h-full fixed top-0 left-0 z-50 p-5 bg-modal-overlay bg-opacity-50 hc:bg-opacity-80 items-center"></div>
+<div class="h-full bg-background">
+<div id="menuMainContent" role="main">
+<div id="searchBox" hidden role="searchbox" aria-label="Suche">
+<form id="mainSearch" action="/xsuche" method="get">
+<div class="w-full flex px-4 pt-12 md:pt-20 pb-44 min-h-[450px] bg-hellblau-menu justify-center">
+<input type="hidden" name="plz" value="85540" />
+<input type="hidden" name="behoerde" value="66552873578" />
+<input type="hidden" name="gemeinde" value="365968738674" />
+<div class="flex flex-row gap-x-5 w-full max-w-6xl">
+<div class="w-full grow justify-start items-center">
+<div class="flex flex-row justify-center items-center w-full max-w-6xl rounded-l-xl rounded-r-xl focusContainer floatingLabelContainer">
+<label for="autoComplete" class="floatingLabel labelOutside absolute top-5 left-3 text-base md:text-xl">Was suchen Sie?</label>
+<input id="autoComplete" class="inputInDialog w-full shrink h-16 p-5 rounded-l-xl text-base md:text-xl rounded-r-none" type="text"
+name="q" aria-label="Suchbegriff eingeben" role="searchbox">
+<button id="headerSucheStarten" type="submit" aria-label="Suche starten"
+class="rounded-r-xl tint-primary-hover hover:bg-white hover:cursor-pointer border hover:border-primary bg-primary min-w-8 w-16 h-16">
+<span class="w-full h-full flex justify-center items-center">
+<img class="w-4 h-4 md:w-6 md:h-6 max-h-full tint-white" src="/images/search-glass.svg" alt="">
+</span>
+</button>
+</div>
+</div>
+<button type="button"
+class="toggleSearch bg-white rounded-lg min-w-8 w-8 h-8 hover:bg-primary hover:cursor-pointer tint-white-hover border border-primary flex justify-center items-center"
+aria-label="Schließen">
+<span class="w-full h-full relative flex justify-center items-center">
+<img class="w-4 h-4 tint-primary" src="/images/schliessen-black.svg" alt="Suche schließen">
+</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div id="mainContent" class="relative" role="main">
+<div class="locationBanner bg-hellblau-menu py-3.5 md:py-3.5 px-4 flex flex-row justify-center" id="loc-selected-banner">
+<div class="justify-between py-3 max-w-7xl flex flex-col md:flex-row grow items-start md:items-center">
+<div class="flex justify-between w-full md:w-auto">
+<div class="flex space-x-4 items-center">
+<img alt="" class="w-5 h-6" src="/images/ortsauswahl.svg">
+<a class="hover:underline decoration-primary text-primary text-sm md:text-xl font-rob-medium "
+href="/dokumente/ort/66552873578?plz=85540&amp;behoerde=66552873578&amp;gemeinde=365968738674"
+aria-label="Behörden für Ihren Ort">85540 - Haar</a>
+</div>
+<div class="rs_skip_always print:hidden flex space-x-4 ml-8 md:ml-0 items-center justify-end md:display-none">
+<button class="h-10 w-10" id="ortswahlButton" type="button">
+<span aria-label="Ortswahl Buttons anzeigen" class="openLocButton custom-loc-accordeon-mobile h-3 w-3" id="open-loc-acc" ></span>
+</button>
+</div>
+</div>
+<div class="print:hidden flex space-x-4 ml-8 md:ml-0 justify-end">
+<button class="locationSearch display-none md:block border-primary border bg-white rounded-full text-sm md:text-base text-primary font-paragraph py-1 md:py-2 px-4 md:px-5 hover:text-white hover:bg-primary"
+id="loc-change-bt"
+type="button">Ort ändern</button>
+<a class="h-full display-none border-primary border bg-white rounded-full text-sm text-primary hover:text-white hover:bg-primary py-1 md:py-2 px-4 md:px-5 md:block" id="loc-del-bt" href="/dokumente/leistung/8110751776?localize=false">
+<div class="flex items-center content-center h-full md:text-base font-paragraph">Ort entfernen</div>
+</a>
+</div>
+</div>
+</div>
+<div class="display-none rs_skip_always" id="location-search"
+title="Bitte wählen Sie einen Ort aus!">
+<div>
+<p class="flex justify-between items-center content-center mx-1">Um ortsspezifische Informationen zu erhalten, wählen Sie bitte einen Ort:</p>
+<form action="/lokalisierung" id="localizationInputForm" method="post">
+<div class="mx-1" id="locationSearchBox">
+<div class="w-full flex flex-row justify-center items-center mt-10 mb-3 home floatingLabelContainer">
+<input name="locationAutocompleteSelectedValue" type="hidden" />
+<input name="redirectToVorOrtOnLocalization" type="hidden" value="false" />
+<input name="pfad" type="hidden" value="/dokumente/leistung/8110751776" />
+<label class="floatingLabel labelOutside absolute left-12 top-2 text-base" for="localizationInputField">PLZ oder Ort / Ortsteil eingeben</label>
+<input autocapitalize="off"
+autocomplete="off" class="pl-12 w-full h-10 p-4 border-primary border-solid border rounded-l-xl rounded-r-xl" dir="ltr" id="localizationInputField" maxlength="2048"
+name="location" spellcheck="false" type="text" value="">
+</div>
+</div>
+<div class="flex justify-between flex-col">
+<button class="m-auto text-white bg-primary hover:bg-white border hover:border-primary hover:border-solid hover:text-primary hover:cursor-pointer font-base rounded-3xl text-base md:text-lg px-5 py-2.5 mt-6 text-center" aria-label="Ortsauswahl übernehmen"
+type="submit">Ortsauswahl übernehmen</button>
+<button class="locDialogClose link text-sm md:text-base text-primary hover:underline m-auto mt-4 mb-2 font-bold" aria-label="Gewählten Ort beibehalten"
+data-isLocalizationPresent="true"
+type="button">Gewählten Ort beibehalten</button>
+</div>
+</form>
+</div>
+</div>
+<div class="print:hidden px-4 pb-8 md:pb-10 flex flex-row justify-center">
+<div class="flex-1 breadcrumbs md:max-w-7xl py-3 md:py-5 text-xs md:text-base text-light-text font-rob-light tracking-wide">
+<a href="/?plz=85540&behoerde=66552873578&gemeinde=365968738674" class="hover:underline md:inline" >Start</a>
+<span class="px-2 md:text-basebig md:inline rs_skip_always"> &gt; </span>
+<a href="/suche/leistung?plz=85540&behoerde=66552873578&gemeinde=365968738674" class="hover:underline md:inline inline">Leistungen</a>
+</div>
+</div>
+<div id="pageTitle" class="w-full px-3 pb-10 md:pb-10 flex flex-row justify-center">
+<div class="flex flex-col grow max-w-6xl">
+<h1 class="break-normal">Personalausweis; Beantragung</h1>
+<div class="mt-6 md:mt-8 text-base md:text-basebig font-rob-light bp-richContent">Deutsche können den Personalausweis bei der zuständigen Gemeinde beantragen.</div>
+</div>
+</div>
+<div class="bg-grau-hintergrund px-4 pb-32 md:pb-56 text-xs flex flex-col items-center gap-5">
+<div class="flex flex-col max-w-6xl w-full space-y-2 md:space-y-5 relative">
+<button aria-label="Alle Bereiche ausklappen"
+class="rs_skip_always absolute top-10 md:top-16 right-2 h-8 w-8 xl:translate-x-[44px] custom-toggle-all-accordions tooltip-enabled"
+data-tooltip="Alle Bereiche ausklappen"
+type="button">
+</button>
+</div>
+<div class="flex flex-col max-w-6xl w-full space-y-2 md:space-y-5 ">
+<div class="pt-14 md:pt-10 flex flex-col max-w-6xl w-full space-y-2 md:space-y-5">
+<h2 class="font-menu text-xl md:text-3xl font-semibold tracking-customh2 pb-4 md:pb-7">Online-Verfahren &amp; Formulare</h2>
+<div class="accordion accordion-expanded bg-hellblau-menu">
+<h3 id="heading-onlineVerfahren" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="onlineVerfahren"
+aria-expanded="true"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/formulare-online-moeglich.svg"
+alt="">
+<span>Online-Verfahren</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich einklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="onlineVerfahren" aria-labelledby="heading-onlineVerfahren" role="region" class="accordion-content text-base md:text-basebig">
+<!-- /* End Text before Link if flag is set */ -->
+<h4>Ergänzung: Stadt Haar</h4>
+<ul class="list-disc space-y-6 md:space-y-3 font-rob-light">
+<li class="flex flex-row space-x-4 list-item-external icon-kreislink">
+<div>
+<a target="_blank" class="text-primary hover:underline font-rob-bold"
+href="https://serviceportal.komuna.net/haar/rsp/papass/start?x=1717774">Statusabfrage für Pass oder Personalausweis</a>
+<div class="mr-9 text-base md:text-basebig font-rob-light bp-richContent">Hier können Sie den aktuellen Status Ihres beantragten Ausweisdokumentes abfragen.</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-formulare" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="formulare"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/formulare.svg"
+alt="">
+<span>Formulare</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="formulare" aria-labelledby="heading-formulare" role="region" class="accordion-content text-base md:text-basebig">
+<ul class="list-disc space-y-6 md:space-y-3 font-rob-light">
+<li class="flex flex-row space-x-4 list-item-external icon-kreislink">
+<div>
+<a class="text-primary hover:underline schriftformErfordernisHinweis"
+target="_blank"
+title="Dieser Link öffnet ein neues Fenster." href="https://www.personalausweisportal.de/SharedDocs/downloads/Webs/PA/DE/informationsmaterial/weiterefuehrendes-material/Mustervollmacht.html?caller=66552873578"
+data-id="362_33308_3348">Vollmacht zur Abholung des neuen Personalausweises</a>
+<div class="schriftformErfordernisHinweis display-none"
+id="362_33308_3348"
+title="Hinweis">
+<p class="text-base font-rob-light">Dieses Formular kann elektronisch (z. B. über ein sicheres Kontaktformular unter Verwendung Ihres Nutzerkontos mit Anmeldung über die elektronische Ausweisfunktion oder das ELSTER-Zertifikat) oder handschriftlich unterschrieben in Papierform bei der zuständigen Stelle eingereicht werden.</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 class="pt-14 md:pt-10 flex flex-col max-w-6xl w-full space-y-2 md:space-y-5 font-menu text-xl md:text-3xl font-semibold tracking-customh2 pb-5 md:pb-6">Für Sie zuständig</h2>
+<div class="accordion accordion-expanded">
+<h3 id="heading-665528735781" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="665528735781"
+aria-expanded="true"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/haus.svg"
+alt="">
+<span>Stadt Haar</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich einklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="665528735781" aria-labelledby="heading-665528735781" role="region" class="accordion-content">
+<div class="grid grid-cols-1 md:grid-cols-11 text-base md:text-lg pb-6 md:pt-5 border-b border-border-grau last:border-0">
+<div class="wrap-break-word col-span-1 md:col-span-4 flex flex-col border-border-grau md:border-r ml-9 md:ml-12 pb-4 md:pb-0 gap-y-6">
+<img class="md:display-none print:hidden max-w-[120px]"
+src="/bilder/6271236788687"
+alt="Stadt Haar"
+title="© ©GemeindeHaar">
+<div>
+<a href="https://formularserver-bp.bayern.de/sichererKontakt?caller=66552873578"
+target="_blank"
+class="md:display-none w-auto max-w-xs md:w-80 border-primary border rounded-full text-center py-3.5 text-base md:text-basebig hover:text-primary font-paragraph px-4 text-white bg-primary hover:bg-white tint-primary-hover inline-block">
+<img class="w-4 mb-1 mr-1 shrink-0 inline-block tint-white" src="/images/services/lock-black.svg" alt="Sie können die Behörde auf sichere Weise kontaktieren">
+Sicheres Kontaktformular
+</a>
+</div>
+<div class="wrap-break-word flex flex-col pb-4 md:pb-0 gap-y-6">
+<div>
+<h3 class="text-text text-base md:text-basebig">Hausanschrift</h3>
+<p class="text-text text-base md:text-basebig font-rob-light">
+Bahnhofstr. 7 <br />
+85540 Haar
+</p>
+</div>
+<div>
+<h3 class="text-text text-base md:text-basebig">Postanschrift</h3>
+<p class="text-text text-base md:text-basebig font-rob-light">Postfach 1209</p>
+<p class="text-text text-base md:text-basebig font-rob-light">85540 Haar</p>
+</div>
+<div>
+<h3 class="text-text text-base md:text-basebig">E-Mail</h3>
+<p class="text-base md:text-basebig font-rob-light text-primary">
+<a class="md:hover:underline" href="mailto:info@stadt-haar.de" aria-label="Per E-Mail erreichen Sie uns unter:info@stadt-haar.de">info@stadt-haar.de</a>
+</p>
+</div>
+<div>
+<h3 class="text-text text-base md:text-basebig">Telefon</h3>
+<p class="text-text text-base md:text-basebig font-rob-light">
+<a href="tel:+4989460020" aria-label="Telefonisch erreichen Sie uns unter:49 89 46002-0">+49 89 46002-0</a>
+</p>
+</div>
+<div>
+<h3 class="text-text text-base md:text-basebig">Fax</h3>
+<p class="text-text text-base md:text-basebig font-rob-light">
+<a href="tel:+498946002111" aria-label="Per Telefax erreichen Sie uns unter:49 89 46002-111">+49 89 46002-111</a>
+</p>
+</div>
+<div>
+<h3 class="text-text text-base md:text-basebig">Webseite</h3>
+<p class="text-base md:text-basebig font-rob-light text-primary">
+<a class="md:hover:underline" target="_blank" href="http://www.stadt-haar.de">www.stadt-haar.de</a>
+</p>
+</div>
+</div>
+</div>
+<div class="col-span-1 md:col-span-7 flex flex-col mt-6 md:mt-0 pl-6 md:pl-24 gap-y-6">
+<div>
+<img class="display-none mb-8 md:flex print:hidden max-w-[120px]"
+src="/bilder/6271236788687"
+alt="Stadt Haar"
+title="© ©GemeindeHaar">
+<div class="flex flex-col md:mb-20">
+<a href="https://formularserver-bp.bayern.de/sichererKontakt?caller=66552873578"
+target="_blank"
+class="display-none md:block w-64 md:w-80 border-primary border rounded-full py-3.5 text-center text-base md:text-basebig hover:text-primary font-paragraph px-4 text-white bg-primary hover:bg-white tint-primary-hover">
+<img class="w-4 mb-1 mr-1 shrink-0 inline-block tint-white" src="/images/services/lock-black.svg" alt="Sie können die Behörde auf sichere Weise kontaktieren">
+Sicheres Kontaktformular
+</a>
+</div>
+<div>
+<ul class="flex flex-col gap-y-6">
+<li class="print:hidden flex items-center justify-end border-border-grau border-b last:border-b-0">
+<a class="w-full flex flex-row items-center gap-x-3 py-4"
+href="/dokumente/leistung/8110751776/gebaeude/66552873578/behoerde/66552873578/oeffnungszeiten?plz=85540&behoerde=66552873578&gemeinde=365968738674" title="Öffnungszeiten für Stadt Haar">
+<img class="w-4 h-4 md:w-7 md:h-7"
+src="/images/services/uhr.svg" alt="">
+Öffnungszeiten
+</a>
+<div class="w-4 h-4 shrink-0">
+<img class="w-4 h-4 min-w-4 min-h-4" src="/images/keyboard-pfeil-rechts.svg"
+alt="">
+</div>
+</li>
+<li class="print:hidden flex items-center justify-end border-border-grau border-b last:border-b-0">
+<a class="w-full flex flex-row items-center gap-x-3 py-4"
+target="_blank"
+title="Standort im BayernAtlas für Stadt Haar anzeigen."
+href="https://geoportal.bayern.de/bayernatlas?X=5330270.26949492&amp;Y=4479816.454133872&amp;zoom=11&amp;crosshair=marker&amp;bgLayer=atkis&amp;topic=ba&amp;lang=de_DE">
+<img class="w-4 h-4 md:w-7 md:h-7"
+src="/images/services/karte-mit-pin.svg"
+alt="">
+Standort im BayernAtlas
+</a>
+<div class="w-4 h-4 shrink-0">
+<img class="w-4 h-4 min-w-4 min-h-4" src="/images/kreislink.svg"
+alt="">
+</div>
+</li>
+<li class="print:hidden flex items-center justify-end border-border-grau border-b last:border-b-0">
+<a class="w-full flex flex-row items-center gap-x-3 py-4"
+target="_blank"
+title="Autoroute nach Stadt Haar planen."
+href="https://www.bayerninfo.de/de/karte?startType=address&amp;destType=address&amp;dep=0&amp;dest=Haar%20Bahnhofstr.%207">
+<img class="w-4 h-4 md:w-7 md:h-7"
+src="/images/services/distanz-zwei-pins.svg"
+alt="">
+Routenplanung
+</a>
+<div class="w-4 h-4 shrink-0">
+<img class="w-4 h-4 min-w-4 min-h-4" src="/images/kreislink.svg"
+alt="">
+</div>
+</li>
+<li class="print:hidden flex items-center justify-end border-border-grau border-b last:border-b-0">
+<a class="w-full flex flex-row items-center gap-x-3 md:gap-x-5 py-4"
+target="_blank"
+title="Fahrplan für öffentliche Verkehrsmittel nach Stadt Haar aufrufen."
+href="https://bahnland-bayern.de/de/moby/ueberblick?zope_command=qi_verify&amp;anyObjFilter_destination=12&amp;name_destination=Haar%2BBahnhofstr.%2B7">
+<img class="w-4 h-4 md:w-7 md:h-7" src="/images/services/bus.svg"
+alt="">
+Fahrplan für öffentliche Verkehrsmittel
+</a>
+<div class="w-4 h-4 shrink-0">
+<img class="w-4 h-4 min-w-4 min-h-4" src="/images/kreislink.svg"
+alt="">
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="print:hidden flex md:justify-end items-center text-primary text-base md:text-basebig mr-6 md:mr-7 md:hover:underline">
+<a href="/dokumente/behoerde/66552873578?plz=85540&behoerde=66552873578&gemeinde=365968738674">Mehr zur Behörde</a>
+<img class="w-3.5 h-3.5 mr-4 ml-6" src="/images/arrow-right.svg" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col max-w-6xl w-full space-y-2 md:space-y-5 pt-14 md:pt-10">
+<h2 class="font-menu text-xl md:text-3xl font-semibold tracking-customh2 pb-4 md:pb-7">Leistungsdetails</h2>
+<div class="accordion">
+<h3 id="heading-langBeschreibung" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="langBeschreibung"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/paragraph-justified.svg"
+alt="">
+<span>Beschreibung</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="langBeschreibung" aria-labelledby="heading-langBeschreibung" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><p><strong>!NEUERUNG SEIT 13.10.2026!</strong></p>
+<p>Ab sofort ist es wieder möglich, eine neue PIN für den Online-Ausweis ohne Gang zum Bürgeramt mit dem PIN-Rücksetz- und Aktivierungsdienst (PRSD) zu erhalten. Der PIN-Rücksetzbrief kann online bestellt und nach Hause zugestellt werden, falls der PIN-Brief nicht mehr auffindbar ist oder die selbst gewählte sechsstellige PIN vergessen wurde. Das kostenfreie Angebot ist für einen begrenzten Zeitraum vorgesehen und begleitet die Einführung der staatlichen EUDI-Wallet „d-you“.</p>
+<p> </p>
+<p><strong>ÄNDERUNG ZUM 01.05.2025</strong></p>
+<p>Gemäß dem Gesetz zur Stärkung der Sicherheit im Pass-, Ausweis- und ausländerrechtlichen Dokumentenwesen vom 3. Dezember 2020 sind seit dem 1. Mai 2025 digitale Lichtbilder für die Beantragung hoheitlicher Dokumente zu verwenden, um zu verhindern, dass manipulierte Lichtbilder in den Antragsprozess eingebracht werden können. Seit 1. Mai 2025 kann das Lichtbild entweder weiterhin beim Fotografen erstellt werden, welcher das angefertigte Lichtbild in eine gesicherte Cloud hochladen muss. Sie erhalten den Ausdruck eines Data-Matrix-Codes (ähnlich wie ein QR-Code), mit Hilfe dessen die Behörde Ihr Lichtbild in der Cloud findet und herunterladen kann. Alternativ kann die Personalausweisbehörde anbieten, Lichtbilder vor Ort in der Behörde elektronisch aufzunehmen und medienbruchfrei in den Antragsprozess zu übernehmen. Zur Frage, ob in der Behörde Geräte zur Lichtbildaufnahme vorhanden sind, wenden Sie sich bitte dorthin.</p>
+<p>Seit dem 2. Mai 2025 besteht ab dem 16. Geburtstag die Möglichkeit, sich beantragte deutsche Personalausweise für eine Zusatzgebühr von 15,00 € an die inländische Meldeadresse schicken zu lassen. Die Sendung darf nur persönlich an die Adressatin oder den Adressaten übergeben werden. Weitere Informationen zum <strong>Direktversand</strong> erhalten Sie bei Ihrer Personalausweisbehörde.</p>
+<p>Zum 01.11.2010 wurde der neue elektronische Personalausweis im Scheckkartenformat eingeführt. Wesentliche Neuerung ist neben der Aufnahme biometrischer Merkmale (Foto) und der freiwilligen Speicherung der Fingerabdrücke (bis 01.08.2021) die Einführung des elektronischen Identitätsnachweises, der sog. eID-Funktion bzw. Online-Ausweisfunktion ("Das bin ich."). Zudem ist der neue Personalausweis für die Nutzung einer Signatur- und Unterschriftsfunktion ("Das habe ich geschrieben." bzw. "Das will ich.") vorbereitet.</p>
+<p>Seit 02.08.2021 werden im Chip des Personalausweises zusätzlich zu dem Lichtbild zwei Fingerabdrücke der Ausweisinhaberin bzw. des Ausweisinhabers gespeichert. Das bisherige Wahlrecht in Bezug auf die Aufnahme der Fingerabdrücke entfällt. Die Fingerabdruckdaten werden ausschließlich für die Speicherung im Chip aufgenommen. Sie werden spätestens bei Abholung des Ausweises beim Ausweishersteller und bei der Personalausweisbehörde gelöscht. Deutschland setzt mit der verpflichtenden Abnahme der Fingerabdrücke die Verordnung 2019/1157 der Europäischen Union um.</p>
+<p>Zudem wurde in Umsetzung der v. g. Verordnung 2019/1157 der Europäischen Union zum 02.08.2021 der Personalausweis im neuen Design eingeführt. Äußerlich erkennbar ist das neue Design an der EU-Flagge, welche zum 02.08.2021 ebenso auf allen Personalausweisen der EU-Mitgliedstaaten eingeführt wurde.</p>
+<p>Seit 15.07.2017 ist mit dem Gesetz zur Förderung des elektronischen Identitätsnachweises die eID-Funktion (Online-Ausweisfunktion) bei jedem Ausweis automatisch und dauerhaft eingeschaltet, sofern Sie 16 Jahre alt sind. Ihre zuständige Personalausweisbehörde bietet Ihnen dazu die Informationsbroschüre des Bundesministeriums des Innern "Sicher, einfach, digital – Der Online-Ausweis" an (siehe unter Weiterführende Links). </p>
+<p>Die Online-Ausweisfunktion ist der digitale Schlüssel für eine moderne Verwaltung, weil sie Ihnen die Inanspruchnahme von digitalen Verwaltungsleistungen ermöglicht, wie beispielsweise die elektronische Wohnsitzanmeldung und die elektronische Beantragung eines Führungszeugnisses. Zudem werden immer mehr Anwendungen der Online-Ausweisfunktion von privatwirtschaftlichen Unternehmen angeboten (z. B. von Banken, Versicherungsunternehmen). Seit Sommer 2017 ist auch ein Vor-Ort-Auslesen von Ausweisdaten unter Anwesenden zum Zwecke der medienbruchfreien Übernahme von Formulardaten möglich.</p>
+<p>Zum 17. Februar 2025 wurde das PIN-Brief-Verfahren umgestellt. Der PIN-Brief, der die fünfstellige Einmal-PIN, sog. Transport-PIN und die PUK (Nummer zur Aufhebung der PIN-Blockade, wenn Sie Ihre PIN dreimal falsch eingegeben haben) für die Nutzung des Online-Ausweises ab 16 Jahren enthält, wird nunmehr bei der Beantragung eines Personalausweises durch die Personalausweisbehörde übergeben. Ab 1. Mai 2026 erhalten Personen unter 10 Jahren keinen PIN-Brief mehr, da im Zusammenhang mit der eID-Funktion die Altersgrenze von 16 Jahren im Zeitraum der Gültigkeit des Dokuments nicht erreicht wird. Bei der Abholung Ihres neuen Personalausweises wird Ihnen ein Schreiben mit dem Sperrkennwort, welches Sie zur Sperrung des Ausweises z. B. bei Verlust benötigen, gemeinsam mit dem neuen Dokument ausgehändigt.</p>
+<p>Für eine einsatzfähige eID-Funktion benötigen Sie Ihre persönliche PIN, weshalb Sie die Einmal-PIN durch eine persönliche PIN ersetzen müssen. Das können Sie selbst (z. B. mit der AusweisApp und einem geeigneten, NFC-fähigen Smartphone) oder jederzeit in Ihrer Behörde gebührenfrei erledigen. Es empfiehlt sich, Ihre selbstgewählte sechsstellige PIN gleich bei der Abholung Ihres Personalausweises in der Behörde zu setzen. Falls Sie Ihre PIN vergessen bzw. den PIN-Brief verlegt haben, können Sie in jeder Personalausweisbehörde die Neusetzung der PIN vornehmen lassen.</p>
+<p>Als Alternative zum persönlichen Besuch beim Bürgeramt steht Ihnen der PIN-Rücksetz- und Aktivierungsdienst (PRSD) ab sofort wieder zur Verfügung (s. Hinweis unter Neuerung seit 13.10.2026).</p>
+<p>Die Online-Ausweisfunktion leistet einen wichtigen Beitrag zur Sicherheit Ihrer Daten und zur Datensparsamkeit, denn Sie können mit Blick auf die persönliche Geheimnummer (PIN) und das Erfordernis von Berechtigungszertifikaten für Diensteanbieter jederzeit selbst bestimmen, ob und wem Sie welche Daten zur Verfügung stellen.</p>
+<p>Deutsche im Sinne des Art. 116 Abs. 1 Grundgesetz sind <strong>verpflichtet, einen gültigen Ausweis zu besitzen</strong>, sobald sie 16 Jahre alt sind und der allgemeinen Meldepflicht unterliegen oder, ohne ihr zu unterliegen, sich überwiegend in Deutschland aufhalten. Sie müssen ihn auf Verlangen einer zur Feststellung der Identität berechtigten Behörde vorlegen und es ihr ermöglichen, ihr Gesicht mit dem Lichtbild des Ausweises abzugleichen. Vom Ausweisinhaber darf nicht verlangt werden, den Personalausweis zu hinterlegen oder in sonstiger Weise den Gewahrsam aufzugeben. Dies gilt nicht für zur Identitätsfeststellung berechtigte Behörden sowie in den Fällen der Einziehung und Sicherstellung.</p>
+<p>Die Ausweispflicht kann auch durch den Besitz und die Vorlage eines gültigen Reisepasses oder vorläufigen Reisepasses erfüllt werden. Nicht dazu geeignet sind Ausweisdokumente anderer Staaten.</p>
+<p>Die Ausweispflicht gilt außerdem für Personen, gegen die eine Freiheitsstrafe vollzogen wird, ab drei Monaten vor der Haftentlassung.</p>
+<p>Die zuständige Personalausweisbehörde kann Personen von der <strong>Ausweispflicht befreien</strong>,</p>
+<ol><li>für die ein Betreuer oder eine Betreuerin nicht nur durch einstweilige Anordnung bestellt ist oder die handlungs- oder einwilligungsunfähig sind und von einem oder von einer mit öffentlich beglaubigter Vollmacht Bevollmächtigten vertreten werden,</li><li>die voraussichtlich dauerhaft in einem Krankenhaus, einem Pflegeheim oder einer ähnlichen Einrichtung untergebracht sind oder</li><li>die sich wegen einer dauerhaften Behinderung nicht allein in der Öffentlichkeit bewegen können.</li></ol>
+<p>Auf Antrag ist ein Personalausweis auch auszustellen, wenn eine Person noch nicht 16 Jahre alt ist oder wenn diese Deutsche im Sinne des Art. 116 Abs. 1 Grundgesetz ist, aber der Meldepflicht deswegen nicht unterliegt, weil sie keine Wohnung in Deutschland hat (z. B. sog. Auslandsdeutsche).</p>
+<p>Der Personalausweis ist unterschiedlich lange gültig:</p>
+<ul><li>vor Vollendung des 24. Lebensjahres: 6 Jahre</li><li>ab Vollendung des 24. Lebensjahres: 10 Jahre</li><li>vorläufiger Personalausweis höchstens: 3 Monate</li></ul>
+<p>Eine Verlängerung der Gültigkeitsdauer ist nicht möglich.</p>
+<p><strong>Zuständigkeit</strong></p>
+<p>Für die Ausstellung des Personalausweises ist die Gemeinde zuständig, in der Sie für Ihre Wohnung, bei mehreren Wohnungen für Ihre Hauptwohnung, gemeldet sind. Bei Vorliegen eines wichtigen Grundes kann auch eine unzuständige Personalausweisbehörde die Ausstellung vornehmen.</p>
+<p>Seit dem 01.01.2013 ist für Personalausweisangelegenheiten im Ausland das Auswärtige Amt mit den von ihm bestimmten Auslandsvertretungen zuständige Personalausweisbehörde. Eine Übersicht über die zuständigen Personalausweisbehörden im Ausland finden Sie unter "Weiterführende Links". Mit Zustimmung der Auslandspersonalausweisbehörde können Personalausweisanträge im Ausland lebender Deutscher von Personalausweisbehörden im Inland entgegengenommen und bearbeitet werden, wenn ein wichtiger Grund dargelegt wird (wenn z. B. der Weg zur zuständigen Personalausweisbehörde erheblich weiter ist als zur unzuständigen Personalausweisbehörde).</p></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-voraussetzungen" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="voraussetzungen"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/check-square.svg"
+alt="">
+<span>Voraussetzung</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="voraussetzungen" aria-labelledby="heading-voraussetzungen" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><ul><li>Deutsche(r) im Sinne des Art. 116 Abs. 1 Grundgesetz;</li><li>Stellung eines förmlichen Antrags bei der jeweils zuständigen Gemeinde durch Antragssteller (ab dem 16. Lebensjahr) bzw. gesetzlichen Vertreter (z.B. bei gemeinsamem Sorgerecht durch beide Elternteile, leben diese nicht nur vorübergehend getrennt i. d. R. allein durch den Elternteil, bei dem sich das Kind gewöhnlich aufhält) oder Betreuer;</li><li>Vertretung durch Bevollmächtigte nicht zulässig.</li><li>Zur Prüfung der Identität muss der Personalausweisbewerber (also auch das Kind oder der Jugendliche unter 16 Jahren) grundsätzlich persönlich bei der Personalausweisbehörde erscheinen.</li></ul></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-unterlagen" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="unterlagen"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/dokument-leer-doppelt.svg"
+alt="">
+<span>Erforderliche Unterlagen</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="unterlagen" aria-labelledby="heading-unterlagen" role="region" class="accordion-content text-base md:text-basebig">
+<!-- /* End Text before Link if flag is set */ -->
+<ul class="list-disc space-y-6 md:space-y-3 font-rob-light pl-6">
+<li>
+<div>aktuelles biometrisches digitales Lichtbild (Frontalaufnahme)</div>
+</li>
+<li>
+<div>bisheriges amtliches Ausweisdokument (Pass, Personalausweis oder Kinderreisepass)</div>
+</li>
+<li>
+<div>bei Erstausstellung (dazu können auch Neuzuzüge zählen) oder anlassbezogen in der Regel weitere Unterlagen z. B. Personenstandsurkunden, Staatsangehörigkeitsurkunden</div>
+</li>
+<li>
+<div>bei Personalausweisbewerbern unter 16 Jahren:</div>
+<div class="bp-richContent">bei zusammenlebenden Eltern, denen die elterliche Sorge gemeinsam zusteht, kann die Beantragung durch einen Elternteil mit schriftlicher Zustimmung des anderen Elternteils erfolgen, wobei die Unterschrift des anderen Elternteils durch die Personalausweisbehörde überprüft werden soll</div>
+</li>
+<li>
+<div>bei nur einem Sorgeberechtigten: Sorgerechtsnachweis</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-verfahrensablauf" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="verfahrensablauf"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/to-do-liste.svg"
+alt="">
+<span>Verfahrensablauf</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="verfahrensablauf" aria-labelledby="heading-verfahrensablauf" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><p>Nach Beantragung eines Personalausweises wird die Bundesdruckerei GmbH von der Personalausweisbehörde beauftragt, den Personalausweis zu erstellen. </p>
+<p>Sobald das Dokument abholbereit ist, werden Sie informiert. Einige Gemeinden stellen stattdessen für die Auskunft über den Bearbeitungsstand einen Online-Dienst zur Verfügung. Nähere Informationen erhalten Sie bei der Beantragung.</p></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-kosten" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="kosten"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/waehrung-euro.svg"
+alt="">
+<span>Kosten</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="kosten" aria-labelledby="heading-kosten" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><p><strong>Gebühren für die Ausstellung von Personalausweisen</strong></p>
+<ul><li>Antragsteller ab 24 Jahren: 46,00 EUR</li><li>Antragsteller unter 24 Jahren: 27,60 EUR</li><li>Ausstellung von Ausweisen für Bedürftige: Gebührenreduzierung oder -befreiung möglich; aufgrund der Berücksichtigung im Regelbedarf ist eine Bedürftigkeit der Leistungsempfänger nach SGB II und SGB XII im Regelfall nicht gegeben</li><li>Vorläufiger Personalausweis: 10,00 EUR</li><li>Kosten Direktversand eines Personalausweises: 15,00 EUR</li><li>Anhebung der Gebühren um 6,00 EUR, wenn das Lichtbild durch die Personalausweisbehörde gefertigt wurde</li><li>Anhebung der Gebühren um 13,00 EUR, wenn die Amtshandlung auf Veranlassung des Antragstellers außerhalb der behördlichen Dienstzeit oder von einer nicht zuständigen Behörde vorgenommen wird</li><li>Anhebung der Gebühren um 30,00 EUR bei Beantragung durch sog. Auslandsdeutsche bei – unzuständigen – Inlandspersonalausweisbehörden</li></ul>
+<p><strong>Weitere Gebührenregelungen</strong></p>
+<ul><li>Erstmaliges Aktivieren der Online-Ausweisfunktion bei der Vollendung des 16. Lebensjahres: gebührenfrei</li><li>Nachträgliches Aktivieren der Online-Ausweisfunktion bei älteren Ausweisen: gebührenfrei</li><li>Ändern der PIN im Bürgeramt = Neusetzen der Geheimnummer (z. B. PIN vergessen): gebührenfrei</li><li>Ändern der Anschrift bei Umzügen: gebührenfrei</li><li>Sperren der Online-Ausweisfunktion im Verlustfall: gebührenfrei</li><li>Entsperren der Online-Ausweisfunktion: gebührenfrei</li><li>Kosten für das Aufbringen eines elektronischen Signaturzertifikats: Festlegung durch jeweiligen Anbieter </li></ul></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-fristen" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="fristen"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/dokument-mit-uhr.svg"
+alt="">
+<span>Fristen</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="fristen" aria-labelledby="heading-fristen" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent">nicht angegeben</div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-bearbeitungsdauer" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="bearbeitungsdauer"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/dokument-mit-uhr-und-stift.svg"
+alt="">
+<span>Bearbeitungsdauer</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="bearbeitungsdauer" aria-labelledby="heading-bearbeitungsdauer" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><p>Laut Bundesministerium des Innern, für Bau und Heimat dauert es ab Antragstellung in der Regel mindestens zwei Wochen, bis Sie Ihren Personalausweis im Bürgeramt abholen können. Teilweise kann es jedoch auch mehrere Wochen dauern. Bitte tragen Sie dafür Sorge, dass Sie über einen gültigen Personalausweis verfügen und beantragen Sie Ihren Personalausweis rechtzeitig. Nähere Informationen erhalten Sie bei Ihrer zuständigen Personalausweisbehörde.</p>
+<p>Beim vorläufigen Personalausweis ist die Ausstellung sofort möglich.</p></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-rechtsvorschriften" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="rechtsvorschriften"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/paragraph.svg"
+alt="">
+<span>Rechtsgrundlagen</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="rechtsvorschriften" aria-labelledby="heading-rechtsvorschriften" role="region" class="accordion-content text-base md:text-basebig">
+<!-- /* End Text before Link if flag is set */ -->
+<ul class="list-disc space-y-6 md:space-y-3 font-rob-light">
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="http://bundesrecht.juris.de/pauswg/__1.html">§ 1 Gesetz über Personalausweise und den elektronischen Identitätsnachweis (Personalausweisgesetz - PAuswG)</a>
+<div class="bp-richContent mr-9 text-base md:text-basebig font-rob-light">Ausweispflicht</div>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="http://bundesrecht.juris.de/pauswg/__6.html">§ 6 Gesetz über Personalausweise und den elektronischen Identitätsnachweis (Personalausweisgesetz - PAuswG)</a>
+<div class="bp-richContent mr-9 text-base md:text-basebig font-rob-light">Gültigkeitsdauer</div>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="http://www.gesetze-im-internet.de/pauswg/BJNR134610009.html#BJNR134610009BJNG000100000">§§ 7 und 8 Gesetz über Personalausweise und den elektronischen Identitätsnachweis (Personalausweisgesetz - PAuswG)</a>
+<div class="bp-richContent mr-9 text-base md:text-basebig font-rob-light">Sachliche und örtliche Zuständigkeit; Tätigwerden bei örtlicher Unzuständigkeit</div>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="http://bundesrecht.juris.de/pauswg/BJNR134610009.html#BJNR134610009BJNG000200000">§§ 9, 10 und 11 Gesetz über Personalausweise und den elektronischen Identitätsnachweis (Personalausweisgesetz - PAuswG)</a>
+<div class="bp-richContent mr-9 text-base md:text-basebig font-rob-light">Ausstellung eines Ausweises, eID-Funktion</div>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.gesetze-bayern.de/Content/Document/BayZustV-8c">§ 8c Zuständigkeitsverordnung (ZustV)</a>
+<div class="bp-richContent mr-9 text-base md:text-basebig font-rob-light">Zuständigkeit der Gemeinden zur Pass-/Personalausweisausstellung</div>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="http://bundesrecht.juris.de/pauswgebv/">§ 1 Verordnung über Gebühren für Personalausweise und eID-Karten für Unionsbürger und Angehörige des Europäischen Wirtschaftsraums (Personalausweis- und eID-Karten-Gebührenverordnung – PAuswGebV)</a>
+<div class="bp-richContent mr-9 text-base md:text-basebig font-rob-light">Gebühren</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-rechtsbehelf" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="rechtsbehelf"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/hand-cursor.svg"
+alt="">
+<span>Rechtsbehelf</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="rechtsbehelf" aria-labelledby="heading-rechtsbehelf" role="region" class="accordion-content text-base md:text-basebig">
+<!-- /* End Text before Link if flag is set */ -->
+<div class="flex flex-col space-y-3 font-rob-light">nicht angegeben</div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-links" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="links"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/hyperlink.svg"
+alt="">
+<span>Weiterführende Links</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="links" aria-labelledby="heading-links" role="region" class="accordion-content text-base md:text-basebig">
+<!-- /* End Text before Link if flag is set */ -->
+<ul class="list-disc space-y-6 md:space-y-3 font-rob-light">
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.personalausweisportal.de/Webs/PA/DE/buergerinnen-und-buerger/der-personalausweis/der-personalausweis-node.html">Personalausweisportal - Der Personalausweis</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.personalausweisportal.de/Webs/PA/DE/service/faq/faq-node.html">Personalausweisportal – Häufig gestellte Fragen und Antworten (FAQ)</a>
+<div class="bp-richContent mr-9 text-base md:text-basebig font-rob-light"><ul><li>Ich möchte mein Ausweisdokument per Post nach Hause geschickt bekommen. Wie funktioniert das und was kostet es?</li><li>Kann ich mir das Ausweisdokument meines Kindes/meines Ehegatten nach Hause schicken lassen?</li><li>Kann ich mir mein Ausweisdokument an eine Wunschadresse zusenden lassen?</li></ul></div>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.personalausweisportal.de/Webs/PA/DE/buergerinnen-und-buerger/online-ausweisen/online-ausweisen-node.html">Online-Ausweis</a>
+<div class="bp-richContent mr-9 text-base md:text-basebig font-rob-light">Mit dem Online-Ausweis weisen Sie sich sicher im Internet aus. Sie erledigen Ihre Behördengänge oder geschäftliche Angelegenheiten einfach elektronisch. Das spart Zeit, Kosten und Wege.</div>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="http://www.konsularinfo.diplo.de/Vertretung/konsularinfo/de/02/Personalausweise/Personalausweise__ohne__Inlandswohnsitz.html">Personalausweise für Deutsche mit Wohnsitz im Ausland</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="http://www.konsularinfo.diplo.de/contentblob/3823296/Daten/3054729/Zustaendigkeitenliste.pdf"
+data-dateiFormatTyp="PDF">Zuständige Personalausweisbehörden im Ausland</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.bmi.bund.de/DE/themen/moderne-verwaltung/ausweise-und-paesse/ausweise-und-paesse-node.html">Ausweise &amp; Pässe - Informationen des Bundesministeriums des Innern</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.personalausweisportal.de/Webs/PA/DE/buergerinnen-und-buerger/der-personalausweis/beantragung/beantragung-node.html">Informationen zur Beantragung eines Personalausweises</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.personalausweisportal.de/SharedDocs/downloads/Webs/PA/DE/informationsmaterial/flyer-broschueren/Flyer_Sicherheitsmerkmale_Personalausweis.html">Flyer zu den Sicherheitsmerkmalen des Personalausweises - Design 02.05.2024</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://bundespolizei.de/sicher-auf-reisen/passrechtliche-hinweise/passersatzpapiere-beantragen">Ersatzpapiere beantragen</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.personalausweisportal.de/Webs/PA/DE/buergerinnen-und-buerger/online-ausweisen/pin-brief/pin-brief-node.html">Informationen zum PIN-Brief</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.pin-ruecksetzbrief-bestellen.de/">Informationen zum PIN-Rücksetz- und Aktivierungsdienst</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.personalausweisportal.de/Webs/PA/DE/buergerinnen-und-buerger/buergerinnen-und-buerger-node.html">eID-Flyer &quot;SICHER; EINFACH; DIGITAL Der Online-Ausweis&quot;</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.personalausweisportal.de/SharedDocs/faqs/Webs/PA/DE/Haeufige-Fragen/2_biometrie_faq/biometrie-liste.html">Information zu digitalen Lichtbildern ab 01.05.2025</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-verwandteProduktBlaetter" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="verwandteProduktBlaetter"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/navigation-menue-punkte.svg"
+alt="">
+<span>Verwandte Themen</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="verwandteProduktBlaetter" aria-labelledby="heading-verwandteProduktBlaetter" role="region" class="accordion-content text-base md:text-basebig">
+<!-- /* End Text before Link if flag is set */ -->
+<ul class="list-disc space-y-6 md:space-y-3 font-rob-light">
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/8070860553300?plz=85540&behoerde=66552873578&gemeinde=365968738674">Personalausweis; Beantragung bei ständigem Wohnsitz im Ausland</a>
+<div><p>Wenn Sie im Ausland wohnen oder sich dort gewöhnlich aufhalten, können Sie Ihren Personalausweis bei einer deutschen Auslandsvertretung oder in einigen Ländern auch bei einer Honorarkonsularbeamtin oder einem Honorarkonsularbeamten persönlich beantragen.</p></div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/2087867784285?plz=85540&behoerde=66552873578&gemeinde=365968738674">Personalausweis; Beantragung der Befreiung von der Ausweispflicht</a>
+<div><p>Deutsche können in bestimmten Fällen eine Befreiung von der Ausweispflicht bei der zuständigen Gemeinde beantragen.</p></div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/4144930735149?plz=85540&behoerde=66552873578&gemeinde=365968738674">Personalausweis, eID-Karte oder elektronischer Aufenthaltstitel; Beantragung eines Braille-Aufklebers</a>
+<div><p>In der Sehfähigkeit beeinträchtigte Personen können einen transparenten Aufkleber mit Brailleschrift für die Rückseite des Personalausweises, der eID-Karte oder des elektronischen Aufenthaltstitels bei ihrer zuständigen Gemeinde bzw. Ausländerbehörde beantragen.</p></div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/279087224515?plz=85540&behoerde=66552873578&gemeinde=365968738674">Personalausweis, elektronischer Aufenthaltstitel und eID-Karte; Auskunft über gespeicherte Daten</a>
+<div><p>Sie können bei der Personalausweisbehörde Einsicht in die auf dem Chip Ihres neuen Personalausweises oder Ihres elektronischen Aufenthaltstitels gespeicherten Daten verlangen. Sie können sich diese Daten aber auch am Smartphone anzeigen lassen.</p></div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/2460479415164?plz=85540&behoerde=66552873578&gemeinde=365968738674">Personalausweis- oder eID-Karte; Zurücksetzung der PIN und Aktivierung der Online-Ausweisfunktion</a>
+<div><p>Sie können die PIN Ihres Personalausweises oder Ihrer eID-Karte zurücksetzen lassen oder die Online-Ausweisfunktion Ihres Personalausweises aktivieren.</p></div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/9332988744?plz=85540&behoerde=66552873578&gemeinde=365968738674">Reisedokumente für Kinder; Beantragung</a>
+<div>Reisedokumente für ein deutsches Kind können Sie bei der Gemeinde beantragen.</div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/0999643770?plz=85540&behoerde=66552873578&gemeinde=365968738674">Reisepass; Beantragung</a>
+<div>Der Reisepass bzw. der vorläufige Reisepass ist ein amtliches Ausweisdokument für Deutsche, der grundsätzlich zur Einreise in die Bundesrepublik Deutschland bzw. zur Ausreise aus der Bundesrepublik Deutschland benötigt wird und bei der zuständigen Gemeinde beantragt werden kann.</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="justify-start w-full max-w-6xl border-t border-border-grau mt-10 md:mt-24 pt-10 md:pt-10 text-light-text text-sm md:text-base font-rob-light">
+<div>Stand: 16.10.2026</div>
+<div>
+<span>Redaktionell verantwortlich für Leistungsbeschreibung:</span>
+<a class="text-primary hover:underline"
+href="/dokumente/behoerde/6888794204?plz=85540&behoerde=66552873578&gemeinde=365968738674">Bayerisches Staatsministerium des Innern, für Sport und Integration</a>
+</div>
+</div>
+</div>
+</div>
+<button tabindex="0" data-tooltip="Zum Seitenanfang" id="btnScrollTop"
+class="rs_skip_always print:hidden backToTop w-8 h-8 md:w-14 md:h-14 right-6 md:right-4 bottom-28 z-10 fixed display-none"
+type="button">
+<span class="w-full h-full border rounded-full bg-white tint-white-hover hover:bg-primary border-primary flex justify-center items-center">
+<img class="w-4 h-4 tint-primary" src="/images/arrow-up-1.svg" alt="Zum Seitenanfang">
+</span>
+</button>
+</div>
+</div>
+<div tabindex="0"></div>
+</body>
+</html>

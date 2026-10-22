@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="de" class="base-font-normal ">
+<head data-ctx="/" data-publish="false" data-captchaenabled="true" data-captchasitekey="FCMI1RH79MBGRHSQ" data-captchaendpoint="https://eu-api.friendlycaptcha.eu/api/v1/puzzle">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index">
+<meta name="robots" content="follow">
+<meta name="description" content="Verwaltung digital! Beschreibungen von Leistungen der staatlichen und kommunalen Verwaltungen mit Kontaktinformationen der zuständigen Behörde.">
+<meta name="keywords" content="Plastikmüll,Abfallgebühren,Hausmüll,Restmüll,Mülltonne,Altpapier,Wertstoffe,Elektroschrott,Spermüll,Müllabfuhr,Müll,Biomüll,Hausabfall,Ver- und Entsorgung">
+<meta property="og:image" content="/images/bayernportal.png" />
+<meta property="og:description" content="Verwaltung digital! Beschreibungen von Leistungen der staatlichen und kommunalen Verwaltungen mit Kontaktinformationen der zuständigen Behörde."/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.bayernportal.de/dokumente/leistung/21664765410">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico?ver=2" />
+<meta property="og:title" content="Abfall; Entsorgung - BayernPortal" />
+<title>Abfall; Entsorgung - BayernPortal</title>
+<link rel="preload" as="style" href="/styles/style.min.css?ver=4" />
+<link rel="stylesheet" href="/styles/style.min.css?ver=4" />
+<link rel="preload" as="style" href="/styles/jquery-ui/style.ui.css?ver=2" type="text/css" media="screen">
+<link href="/styles/jquery-ui/style.ui.css?ver=2" rel="stylesheet" type="text/css" media="screen">
+<link rel="preload" as="font" href="/fonts/Montserrat-VariableFont_wght.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Regular.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Bold.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Light.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="style" href="/fonts/Montserrat/Montserrat.css?family=Montserrat:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/fonts/Montserrat/Montserrat.css?family=Montserrat:wght@400;500;600&amp;display=swap">
+</head>
+<body class="overflow-hidden has-dialog">
+<noscript>
+<div id="noscriptText" class="bg-grau-hintergrund p-5 text-center border">
+<h3 class="font-sans text-primary text-base md:text-lg font-normal tracking-wide">Hinweis: Bitte aktivieren Sie JavaScript in Ihrem Browser, um den vollen Funktionsumfang dieser Seite nutzen zu können!</h3>
+</div>
+</noscript>
+<div class="overflow-hidden w-full h-full fixed top-0 left-0 z-50 p-5 bg-modal-overlay bg-opacity-50 hc:bg-opacity-80 items-center"></div>
+<div class="h-full bg-background">
+<div id="menuMainContent" role="main">
+<div id="searchBox" hidden role="searchbox" aria-label="Suche">
+<form id="mainSearch" action="/xsuche" method="get">
+<div class="w-full flex px-4 pt-12 md:pt-20 pb-44 min-h-[450px] bg-hellblau-menu justify-center">
+<div class="flex flex-row gap-x-5 w-full max-w-6xl">
+<div class="w-full grow justify-start items-center">
+<div class="flex flex-row justify-center items-center w-full max-w-6xl rounded-l-xl rounded-r-xl focusContainer floatingLabelContainer">
+<label for="autoComplete" class="floatingLabel labelOutside absolute top-5 left-3 text-base md:text-xl">Was suchen Sie?</label>
+<input id="autoComplete" class="inputInDialog w-full shrink h-16 p-5 rounded-l-xl text-base md:text-xl rounded-r-none" type="text"
+name="q" aria-label="Suchbegriff eingeben" role="searchbox">
+<button id="headerSucheStarten" type="submit" aria-label="Suche starten"
+class="rounded-r-xl tint-primary-hover hover:bg-white hover:cursor-pointer border hover:border-primary bg-primary min-w-8 w-16 h-16">
+<span class="w-full h-full flex justify-center items-center">
+<img class="w-4 h-4 md:w-6 md:h-6 max-h-full tint-white" src="/images/search-glass.svg" alt="">
+</span>
+</button>
+</div>
+</div>
+<button type="button"
+class="toggleSearch bg-white rounded-lg min-w-8 w-8 h-8 hover:bg-primary hover:cursor-pointer tint-white-hover border border-primary flex justify-center items-center"
+aria-label="Schließen">
+<span class="w-full h-full relative flex justify-center items-center">
+<img class="w-4 h-4 tint-primary" src="/images/schliessen-black.svg" alt="Suche schließen">
+</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div id="mainContent" class="relative" role="main">
+<div class="locationBanner bg-grau-hintergrund py-3.5 md:py-3.5 px-4 flex flex-row justify-center" id="index-loc-refused-banner">
+<div class="md:flex justify-between py-3 max-w-7xl flex flex-row grow items-center">
+<div class="flex justify-between items-center content-center">
+<div class="flex space-x-4">
+<img alt="" class="w-5 h-6" src="/images/ortsauswahl.svg">
+<span class="text-primary text-sm md:text-xl font-medium ">- kein Ort -</span>
+</div>
+</div>
+<div class="flex">
+<button class="print:hidden locationSearch rounded-full bg-primary border border-primary hover:bg-white hover:border text-white hover:text-primary h-10" id="locationBannerSucheStarten" type="button">
+<span class="text-sm md:text-base font-paragraph py-1 md:py-2 px-4 md:px-5">Ort auswählen</span>
+</button>
+</div>
+</div>
+</div>
+<div class="display-none rs_skip_always" id="location-search"
+title="Bitte wählen Sie einen Ort aus!">
+<div>
+<p class="flex justify-between items-center content-center mx-1">Um ortsspezifische Informationen zu erhalten, wählen Sie bitte einen Ort:</p>
+<form action="/lokalisierung" id="localizationInputForm" method="post">
+<div class="mx-1" id="locationSearchBox">
+<div class="w-full flex flex-row justify-center items-center mt-10 mb-3 home floatingLabelContainer">
+<input name="locationAutocompleteSelectedValue" type="hidden" />
+<input name="redirectToVorOrtOnLocalization" type="hidden" value="false" />
+<input name="pfad" type="hidden" value="/dokumente/leistung/21664765410" />
+<label class="floatingLabel labelOutside absolute left-12 top-2 text-base" for="localizationInputField">PLZ oder Ort / Ortsteil eingeben</label>
+<input autocapitalize="off"
+autocomplete="off" class="pl-12 w-full h-10 p-4 border-primary border-solid border rounded-l-xl rounded-r-xl" dir="ltr" id="localizationInputField" maxlength="2048"
+name="location" spellcheck="false" type="text" value="">
+</div>
+</div>
+<div class="flex justify-between flex-col">
+<button class="m-auto text-white bg-primary hover:bg-white border hover:border-primary hover:border-solid hover:text-primary hover:cursor-pointer font-base rounded-3xl text-base md:text-lg px-5 py-2.5 mt-6 text-center" aria-label="Ortsauswahl übernehmen"
+type="submit">Ortsauswahl übernehmen</button>
+<button class="locDialogClose link text-sm md:text-base text-primary hover:underline m-auto mt-4 mb-2 font-bold" aria-label="Keinen Ort auswählen"
+data-isLocalizationPresent="false"
+type="button">Keinen Ort auswählen</button>
+</div>
+</form>
+</div>
+</div>
+<div class="print:hidden px-4 pb-8 md:pb-10 flex flex-row justify-center">
+<div class="flex-1 breadcrumbs md:max-w-7xl py-3 md:py-5 text-xs md:text-base text-light-text font-rob-light tracking-wide">
+<a href="/" class="hover:underline md:inline" >Start</a>
+<span class="px-2 md:text-basebig md:inline rs_skip_always"> &gt; </span>
+<a href="/suche/leistung" class="hover:underline md:inline inline">Leistungen</a>
+</div>
+</div>
+<div id="pageTitle" class="w-full px-3 pb-10 md:pb-10 flex flex-row justify-center">
+<div class="flex flex-col grow max-w-6xl">
+<h1 class="break-normal">Abfall; Entsorgung</h1>
+<div class="mt-6 md:mt-8 text-base md:text-basebig font-rob-light bp-richContent">Die Abfallentsorgung wird von den Landkreisen und kreisfreien Städten für ihr Gebiet wahrgenommen.</div>
+</div>
+</div>
+<div class="bg-grau-hintergrund px-4 pb-32 md:pb-56 text-xs flex flex-col items-center gap-5">
+<div class="flex flex-col max-w-6xl w-full space-y-2 md:space-y-5 relative">
+<button aria-label="Alle Bereiche ausklappen"
+class="rs_skip_always absolute top-10 md:top-16 right-2 h-8 w-8 xl:translate-x-[44px] custom-toggle-all-accordions tooltip-enabled"
+data-tooltip="Alle Bereiche ausklappen"
+type="button">
+</button>
+</div>
+<div class="flex flex-col max-w-6xl w-full space-y-2 md:space-y-5 ">
+<h2 class="pt-14 md:pt-10 flex flex-col max-w-6xl w-full space-y-2 md:space-y-5 font-menu text-xl md:text-3xl font-semibold tracking-customh2 pb-5 md:pb-6">Für Sie zuständig</h2>
+<div class="print:hidden flex space-x-4 items-center text-text text-base md:text-basebig font-rob-light">Für die Kontaktdaten der zuständigen Stelle und ggf. lokal gültige Informationen wählen Sie über &bdquo;Ort auswählen&quot; einen Ort aus.</div>
+<a class="flex flex-col rounded-lg border bg-background max-w-6xl w-full space-y-1"
+href="/dokumente/behoerde/55331546385">
+<div class="flex flex-row justify-between py-5 px-3.5 md:py-9 md:px-8">
+<div class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8" src="/images/services/haus.svg"
+alt="Stilisiertes Bild eines Hauses">
+<div class=" text-base md:text-xl font-menu font-medium">Landratsämter</div>
+</div>
+<div class="print:hidden flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled" data-tooltip="Mehr zur Behörde">
+<img class="w-4 h-4 md:w-6 md:h-6 inline align-middle" src="/images/keyboard-pfeil-rechts.svg" alt="Mehr zur Behörde">
+</div>
+</div>
+</a><a class="flex flex-col rounded-lg border bg-background max-w-6xl w-full space-y-1"
+href="/dokumente/behoerde/0154617984105">
+<div class="flex flex-row justify-between py-5 px-3.5 md:py-9 md:px-8">
+<div class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8" src="/images/services/haus.svg"
+alt="Stilisiertes Bild eines Hauses">
+<div class=" text-base md:text-xl font-menu font-medium">Kreisfreie Städte</div>
+</div>
+<div class="print:hidden flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled" data-tooltip="Mehr zur Behörde">
+<img class="w-4 h-4 md:w-6 md:h-6 inline align-middle" src="/images/keyboard-pfeil-rechts.svg" alt="Mehr zur Behörde">
+</div>
+</div>
+</a>
+<div class="flex flex-col max-w-6xl w-full space-y-2 md:space-y-5 pt-14 md:pt-10">
+<h2 class="font-menu text-xl md:text-3xl font-semibold tracking-customh2 pb-4 md:pb-7">Leistungsdetails</h2>
+<div class="accordion">
+<h3 id="heading-langBeschreibung" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="langBeschreibung"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/paragraph-justified.svg"
+alt="">
+<span>Beschreibung</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="langBeschreibung" aria-labelledby="heading-langBeschreibung" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><p>Die Landkreise und kreisfreien Städte nehmen in Bayern die Abfallentsorgung für ihr Gebiet als Pflichtaufgabe wahr. Haben Sie Fragen zu den Entsorgungseinrichtungen (Standort, Öffnungszeiten etc.) oder den Entsorgungsgebühren, so wenden Sie sich bitte an Ihren Landkreis bzw. an Ihre kreisfreie Stadt.</p>
+<p>Viele Abfallarten werden als Wertstoffe separat gesammelt. Welche das im Einzelnen sind, wie sie gesammelt werden und was schlussendlich doch zum Restmüll gehört, ist im Kreislaufwirtschaftsgesetz (KrWG) sowie in der kommunalen Abfallsatzung geregelt.</p>
+<p>Darüber informieren die Abfallberatungen der Kommunen (Landkreise, kreisfreie Städte) oder auch Abfallzweckverbände. Diese sind im Rahmen der abfallrechtlichen Vorgaben für die Entsorgung verantwortlich und stellen Hol- und Bringsysteme zur Verfügung. Dabei stehen Maßnahmen zur Unterstützung der stofflichen Verwertung im Vordergrund.</p>
+<ul><li>Holsysteme sind die Müllabfuhr, die Gelbe Tonne, die Papier- und die Grüngut-/ Bioabfalltonne sowie der Gelbe Sack, falls er geholt wird.</li><li>Bringsysteme sind Wertstoffinseln (insbesondere für Glas, Metall, Textilien) und Wertstoffhöfe.</li></ul>
+<p>Je bequemer für den Bürger, also haushaltsnäher, gesammelt wird, desto größer ist die Sammelmenge. Je größer das Wissen um die korrekte Trennung und die Wahrnehmung dieser Verantwortlichkeit beim Einzelnen, desto sortenreiner ist die Sammlung als Voraussetzung für eine hochwertige Verwertung.</p></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-voraussetzungen" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="voraussetzungen"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/check-square.svg"
+alt="">
+<span>Voraussetzung</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="voraussetzungen" aria-labelledby="heading-voraussetzungen" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><p>Sie sind an Ihrem Wohnort angemeldet.</p></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-verfahrensablauf" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="verfahrensablauf"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/to-do-liste.svg"
+alt="">
+<span>Verfahrensablauf</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="verfahrensablauf" aria-labelledby="heading-verfahrensablauf" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><p>Die meisten zuständigen Behörden geben Abfallkalender heraus. Aus diesen erfahren Sie die Abfuhrtermine und die Sammelarten.</p></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-kosten" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="kosten"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/waehrung-euro.svg"
+alt="">
+<span>Kosten</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="kosten" aria-labelledby="heading-kosten" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><p>Die Kosten richten sich nach der kommunalen Gebührensatzung.</p></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-fristen" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="fristen"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/dokument-mit-uhr.svg"
+alt="">
+<span>Fristen</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="fristen" aria-labelledby="heading-fristen" role="region" class="accordion-content text-base md:text-basebig">
+<div class="bp-richContent"><p>Die Abfallentsorgung erfolgt in der Regel an bestimmten Terminen.</p></div>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-rechtsvorschriften" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="rechtsvorschriften"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/paragraph.svg"
+alt="">
+<span>Rechtsgrundlagen</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="rechtsvorschriften" aria-labelledby="heading-rechtsvorschriften" role="region" class="accordion-content text-base md:text-basebig">
+<!-- /* End Text before Link if flag is set */ -->
+<ul class="list-disc space-y-6 md:space-y-3 font-rob-light">
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.gesetze-im-internet.de/krwg">Gesetz zur Förderung der Kreislaufwirtschaft und Sicherung der umweltverträglichen Bewirtschaftung von Abfällen (Kreislaufwirtschaftsgesetz - KrWG)</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="http://www.gesetze-im-internet.de/elektrog_2015/">Gesetz über das Inverkehrbringen, die Rücknahme und die umweltverträgliche Entsorgung von Elektro- und Elektronikgeräten (Elektro- und Elektronikgerätegesetz - ElektroG)</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.gesetze-im-internet.de/battdg/BJNR0E90B0025.html">Gesetz zur Durchführung der Verordnung (EU) 2023/1542 betreffend Batterien und Altbatterien (Batterierecht-Durchführungsgesetz – BattDG)</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.gesetze-bayern.de/Content/Document/BayAbfAlG">Gesetz zur Vermeidung, Verwertung und sonstigen Bewirtschaftung von Abfällen in Bayern (Bayerisches Abfallwirtschaftsgesetz – BayAbfG)</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.gesetze-bayern.de/Content/Document/BayAbfPV">Verordnung über den Abfallwirtschaftsplan Bayern (AbfPV)</a>
+</div>
+</li>
+<li class="list-item-external icon-kreislink flex flex-row space-x-4">
+<div>
+<a target="_blank" class="text-primary hover:underline"
+href="https://www.gesetze-bayern.de/Content/Document/BayAbfAlG-3">Satzungen der entsorgungspflichtigen Körperschaften</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-verwandteProduktBlaetter" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="verwandteProduktBlaetter"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/navigation-menue-punkte.svg"
+alt="">
+<span>Verwandte Themen</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="verwandteProduktBlaetter" aria-labelledby="heading-verwandteProduktBlaetter" role="region" class="accordion-content text-base md:text-basebig">
+<!-- /* End Text before Link if flag is set */ -->
+<ul class="list-disc space-y-6 md:space-y-3 font-rob-light">
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/7829368055164">Abfallentsorgung; Beantragung eines kommunalen Zuschusses</a>
+<div>Gemeinden und Landratsämter können einen Zuschuss für die Entsorgung bestimmter Abfälle gewähren (z. B. Windelentsorgung) oder zur Vermeidung bestimmter Abfälle (z. B. Zuschuss für den Kauf von Mehrwegwindeln oder die Anschaffung eines Komposters).</div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/71663715636">Abfallentsorgung; Beratung</a>
+<div>Die Landkreise und kreisfreien Städte sind in Bayern für die Abfallentsorgung im Regelfall zuständig. Sie bieten für Bürger und Gewerbe Informationen zur Abfallentsorgung an.</div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/75774914617">Abfallentsorgung; Mitwirkung der Gemeinde</a>
+<div><p>Landkreise können einzelne Aufgaben der Abfallentsorgung den kreisangehörigen Gemeinden übertragen. Die kreisangehörigen Gemeinden unterstützen den Landkreis bei der Durchführung von Verwertungsmaßnahmen auf ihrem Gebiet.</p></div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/26108945467">Abfallgebühren; Zahlung</a>
+<div>Für die Entsorgung von Abfällen werden Gebühren erhoben. Gebührenschuldner ist, wer die Abfallentsorgungseinrichtungen des Landkreises oder der kreisfreien Stadt benutzt.</div>
+</div>
+</li>
+<li class="flex flex-row space-x-4 list-item-external icon-pfeil">
+<div class="">
+<a class="block text-primary hover:underline"
+href="/dokumente/leistung/3444257404">Abfallratgeber Bayern; Informationssystem</a>
+<div><p>Die Online-Anwendung "Abfallratgeber Bayern" liefert für Privathaushalte, Unternehmen und öffentlich-rechtliche Entsorgungsträger umfassende Informationen für die Handhabung und Entsorgung von Abfällen. </p></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="justify-start w-full max-w-6xl border-t border-border-grau mt-10 md:mt-24 pt-10 md:pt-10 text-light-text text-sm md:text-base font-rob-light">
+<div>Stand: 15.09.2026</div>
+<div>
+<span>Redaktionell verantwortlich für Leistungsbeschreibung:</span>
+<a class="text-primary hover:underline"
+href="/dokumente/behoerde/034403370886">Bayerisches Staatsministerium für Umwelt und Verbraucherschutz</a>
+</div>
+</div>
+</div>
+</div>
+<button tabindex="0" data-tooltip="Zum Seitenanfang" id="btnScrollTop"
+class="rs_skip_always print:hidden backToTop w-8 h-8 md:w-14 md:h-14 right-6 md:right-4 bottom-28 z-10 fixed display-none"
+type="button">
+<span class="w-full h-full border rounded-full bg-white tint-white-hover hover:bg-primary border-primary flex justify-center items-center">
+<img class="w-4 h-4 tint-primary" src="/images/arrow-up-1.svg" alt="Zum Seitenanfang">
+</span>
+</button>
+</div>
+</div>
+<div tabindex="0"></div>
+</body>
+</html>

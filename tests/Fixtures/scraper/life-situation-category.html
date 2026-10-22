@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="de" class="base-font-normal ">
+<head data-ctx="/" data-publish="false" data-captchaenabled="true" data-captchasitekey="FCMI1RH79MBGRHSQ" data-captchaendpoint="https://eu-api.friendlycaptcha.eu/api/v1/puzzle">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index">
+<meta name="robots" content="follow">
+<meta name="description" content="Verwaltung digital! Beschreibungen von Leistungen der staatlichen und kommunalen Verwaltungen mit Kontaktinformationen der zuständigen Behörde.">
+<meta property="og:image" content="/images/bayernportal.png" />
+<meta property="og:description" content="Verwaltung digital! Beschreibungen von Leistungen der staatlichen und kommunalen Verwaltungen mit Kontaktinformationen der zuständigen Behörde."/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.bayernportal.de/suche/lebenslage/hierarchisch/buerger">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico?ver=2" />
+<meta property="og:title" content="Lebenslagen - BayernPortal" />
+<title>Lebenslagen - BayernPortal</title>
+<link rel="preload" as="style" href="/styles/style.min.css?ver=4" />
+<link rel="stylesheet" href="/styles/style.min.css?ver=4" />
+<link rel="preload" as="style" href="/styles/jquery-ui/style.ui.css?ver=2" type="text/css" media="screen">
+<link href="/styles/jquery-ui/style.ui.css?ver=2" rel="stylesheet" type="text/css" media="screen">
+<link rel="preload" as="font" href="/fonts/Montserrat-VariableFont_wght.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Regular.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Bold.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Light.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="style" href="/fonts/Montserrat/Montserrat.css?family=Montserrat:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/fonts/Montserrat/Montserrat.css?family=Montserrat:wght@400;500;600&amp;display=swap">
+</head>
+<body class="overflow-hidden has-dialog">
+<noscript>
+<div id="noscriptText" class="bg-grau-hintergrund p-5 text-center border">
+<h3 class="font-sans text-primary text-base md:text-lg font-normal tracking-wide">Hinweis: Bitte aktivieren Sie JavaScript in Ihrem Browser, um den vollen Funktionsumfang dieser Seite nutzen zu können!</h3>
+</div>
+</noscript>
+<div class="overflow-hidden w-full h-full fixed top-0 left-0 z-50 p-5 bg-modal-overlay bg-opacity-50 hc:bg-opacity-80 items-center"></div>
+<div class="h-full bg-background">
+<div id="menuMainContent" role="main">
+<div id="searchBox" hidden role="searchbox" aria-label="Suche">
+<form id="mainSearch" action="/xsuche" method="get">
+<div class="w-full flex px-4 pt-12 md:pt-20 pb-44 min-h-[450px] bg-hellblau-menu justify-center">
+<div class="flex flex-row gap-x-5 w-full max-w-6xl">
+<div class="w-full grow justify-start items-center">
+<div class="flex flex-row justify-center items-center w-full max-w-6xl rounded-l-xl rounded-r-xl focusContainer floatingLabelContainer">
+<label for="autoComplete" class="floatingLabel labelOutside absolute top-5 left-3 text-base md:text-xl">Was suchen Sie?</label>
+<input id="autoComplete" class="inputInDialog w-full shrink h-16 p-5 rounded-l-xl text-base md:text-xl rounded-r-none" type="text"
+name="q" aria-label="Suchbegriff eingeben" role="searchbox">
+<button id="headerSucheStarten" type="submit" aria-label="Suche starten"
+class="rounded-r-xl tint-primary-hover hover:bg-white hover:cursor-pointer border hover:border-primary bg-primary min-w-8 w-16 h-16">
+<span class="w-full h-full flex justify-center items-center">
+<img class="w-4 h-4 md:w-6 md:h-6 max-h-full tint-white" src="/images/search-glass.svg" alt="">
+</span>
+</button>
+</div>
+</div>
+<button type="button"
+class="toggleSearch bg-white rounded-lg min-w-8 w-8 h-8 hover:bg-primary hover:cursor-pointer tint-white-hover border border-primary flex justify-center items-center"
+aria-label="Schließen">
+<span class="w-full h-full relative flex justify-center items-center">
+<img class="w-4 h-4 tint-primary" src="/images/schliessen-black.svg" alt="Suche schließen">
+</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div id="mainContent" class="relative" role="main">
+<div class="locationBanner bg-grau-hintergrund py-3.5 md:py-3.5 px-4 flex flex-row justify-center" id="index-loc-refused-banner">
+<div class="md:flex justify-between py-3 max-w-7xl flex flex-row grow items-center">
+<div class="flex justify-between items-center content-center">
+<div class="flex space-x-4">
+<img alt="" class="w-5 h-6" src="/images/ortsauswahl.svg">
+<span class="text-primary text-sm md:text-xl font-medium ">- kein Ort -</span>
+</div>
+</div>
+<div class="flex">
+<button class="print:hidden locationSearch rounded-full bg-primary border border-primary hover:bg-white hover:border text-white hover:text-primary h-10" id="locationBannerSucheStarten" type="button">
+<span class="text-sm md:text-base font-paragraph py-1 md:py-2 px-4 md:px-5">Ort auswählen</span>
+</button>
+</div>
+</div>
+</div>
+<div class="display-none rs_skip_always" id="location-search"
+title="Bitte wählen Sie einen Ort aus!">
+<div>
+<p class="flex justify-between items-center content-center mx-1">Um ortsspezifische Informationen zu erhalten, wählen Sie bitte einen Ort:</p>
+<form action="/lokalisierung" id="localizationInputForm" method="post">
+<div class="mx-1" id="locationSearchBox">
+<div class="w-full flex flex-row justify-center items-center mt-10 mb-3 home floatingLabelContainer">
+<input name="locationAutocompleteSelectedValue" type="hidden" />
+<input name="redirectToVorOrtOnLocalization" type="hidden" value="false" />
+<input name="pfad" type="hidden" value="/suche/lebenslage/hierarchisch/buerger" />
+<label class="floatingLabel labelOutside absolute left-12 top-2 text-base" for="localizationInputField">PLZ oder Ort / Ortsteil eingeben</label>
+<input autocapitalize="off"
+autocomplete="off" class="pl-12 w-full h-10 p-4 border-primary border-solid border rounded-l-xl rounded-r-xl" dir="ltr" id="localizationInputField" maxlength="2048"
+name="location" spellcheck="false" type="text" value="">
+</div>
+</div>
+<div class="flex justify-between flex-col">
+<button class="m-auto text-white bg-primary hover:bg-white border hover:border-primary hover:border-solid hover:text-primary hover:cursor-pointer font-base rounded-3xl text-base md:text-lg px-5 py-2.5 mt-6 text-center" aria-label="Ortsauswahl übernehmen"
+type="submit">Ortsauswahl übernehmen</button>
+<button class="locDialogClose link text-sm md:text-base text-primary hover:underline m-auto mt-4 mb-2 font-bold" aria-label="Keinen Ort auswählen"
+data-isLocalizationPresent="false"
+type="button">Keinen Ort auswählen</button>
+</div>
+</form>
+</div>
+</div>
+<div class="print:hidden px-4 pb-8 md:pb-10 flex flex-row justify-center">
+<div class="flex-1 breadcrumbs md:max-w-7xl py-3 md:py-5 text-xs md:text-base text-light-text font-rob-light tracking-wide">
+<a href="/" class="hover:underline md:inline" >Start</a>
+<span class="px-2 md:text-basebig md:inline rs_skip_always"> &gt; </span>
+<a href="/suche/lebenslage/hierarchisch/buerger" class="hover:underline md:inline inline">Lebenslagen</a>
+</div>
+</div>
+<div id="pageTitle" class="w-full px-3 pb-10 md:pb-10 flex flex-row justify-center">
+<div class="flex flex-col grow max-w-6xl">
+<div class="flex gap-y-4 md:gap-y-9 max-w-6xl align-center flex-col">
+<div class="flex flex-col">
+<h1 class="flex flex-row h-full md:items-center break-normal">Lebenslagen</h1>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full px-3 pb-32 md:pb-56 flex justify-center">
+<div class="w-full max-w-6xl flex flex-col">
+<div class="flex justify-center">
+<ul class="w-auto wrap-break-word grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-2 md:gap-x-5 md:gap-y-5 lg:grow">
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/781142333177167" aria-label="Geburt"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8419237152686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Geburt</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/782820110877167" aria-label="Kinderbetreuung"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8033348281686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Kinderbetreuung</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/784497888577167" aria-label="Schule"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8738014915686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Schule</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/786175666277167" aria-label="Jugend"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8385681598686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Jugend</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/787853443977167" aria-label="Berufsausbildung"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8687681584686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Berufsausbildung</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/791208999377167" aria-label="Freiwilligendienste"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/7681014964686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Freiwilligendienste</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/792886777077167" aria-label="Studium"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8536681591686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Studium</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/794564554777167" aria-label="Arbeit und Beruf"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/7748126072686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Arbeit und Beruf</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/796242332477167" aria-label="Umzug"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8587014922686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Umzug</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/797920110177167" aria-label="Wohnen"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8704459361686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Wohnen</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/799597887877167" aria-label="Bauen"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/7932681619686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Bauen</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/801275665577167" aria-label="Kirchen und Religion"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8251459382686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Kirchen und Religion</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/802953443277167" aria-label="Familie und Partnerschaften"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/7597126079686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Familie und Partnerschaften</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/804631220977167" aria-label="Heirat"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/7949459396686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Heirat</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/806308998677167" aria-label="Mobilität"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8100459389686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Mobilität</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/807986776377167" aria-label="Reisen"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8234681605686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Reisen</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/809664554077167" aria-label="Ausweise und Dokumente"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/7832014957686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Ausweise und Dokumente</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/811342331777167" aria-label="Tiere"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8553459368686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Tiere</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/781135333177318" aria-label="Kultur und Freizeit"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8050126058686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Kultur und Freizeit</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/784490888577318" aria-label="Natur und Umwelt"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8117237166686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Natur und Umwelt</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/813020109477167" aria-label="Waren und Dienstleistungen"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8016570504686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Waren und Dienstleistungen</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/782813110877318" aria-label="Auskünfte und Informationen"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8301792713686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Auskünfte und Informationen</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/814697887177167" aria-label="Steuern und Abgaben"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8486348260686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Steuern und Abgaben</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/816375664877167" aria-label="Gesellschaft und Politik"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8436014929686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Gesellschaft und Politik</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/818053442577167" aria-label="Sicherheit"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8754792692686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Sicherheit</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/819731220277167" aria-label="Notlagen- und Opferhilfen"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8134014943686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Notlagen- und Opferhilfen</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/821408997977167" aria-label="Gesundheit und Vorsorge"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8452792706686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Gesundheit und Vorsorge</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/823086775677167" aria-label="Leben mit Behinderung"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/7848792734686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Leben mit Behinderung</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/824764553377167" aria-label="Ruhestand"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8268237159686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Ruhestand</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/826442331077167" aria-label="Erbschaft und Testament"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/7563570525686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Erbschaft und Testament</h2>
+</article>
+</a>
+</li>
+<li class="flex xl:grow">
+<a href="/dokumente/lebenslage/828120108777167" aria-label="Sterbefall"
+class="px-4 lg:px-6 py-6 md:pt-8 md:pb-11 w-40 h-40 md:w-44 md:h-44 lg:w-64 lg:h-60 rounded-lg bg-grau-hintergrund border border-border-grau">
+<article class="w-full h-full flex grow flex-col justify-between" aria-hidden="true">
+<img src="/bilder/8838681577686" class="w-6 h-6 md:w-10 md:h-10" alt="">
+<h2 class="wrap-break-word font-sans text-text text-base lg:text-lg font-normal tracking-custombase">Sterbefall</h2>
+</article>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<button tabindex="0" data-tooltip="Zum Seitenanfang" id="btnScrollTop"
+class="rs_skip_always print:hidden backToTop w-8 h-8 md:w-14 md:h-14 right-6 md:right-4 bottom-28 z-10 fixed display-none"
+type="button">
+<span class="w-full h-full border rounded-full bg-white tint-white-hover hover:bg-primary border-primary flex justify-center items-center">
+<img class="w-4 h-4 tint-primary" src="/images/arrow-up-1.svg" alt="Zum Seitenanfang">
+</span>
+</button>
+</div>
+</div>
+<div tabindex="0"></div>
+</body>
+</html>

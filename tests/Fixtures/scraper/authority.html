@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="de" class="base-font-normal ">
+<head data-ctx="/" data-publish="false" data-captchaenabled="true" data-captchasitekey="FCMI1RH79MBGRHSQ" data-captchaendpoint="https://eu-api.friendlycaptcha.eu/api/v1/puzzle">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index">
+<meta name="robots" content="follow">
+<meta name="description" content="Verwaltung digital! Beschreibungen von Leistungen der staatlichen und kommunalen Verwaltungen mit Kontaktinformationen der zuständigen Behörde.">
+<meta name="keywords" content="Gemeindeverwaltung,Standesamt Bayern,Standesämter Bayern,Rathaus,Ordnungsbehörde, Ordnungsbehörden Bayern,Sicherheitsbehörde, Sicherheitsbehörden Bayern">
+<meta property="og:image" content="/images/bayernportal.png" />
+<meta property="og:description" content="Verwaltung digital! Beschreibungen von Leistungen der staatlichen und kommunalen Verwaltungen mit Kontaktinformationen der zuständigen Behörde."/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.bayernportal.de/dokumente/behoerde/66552873578">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico?ver=2" />
+<meta property="og:title" content="Stadt Haar, Landkreis München - BayernPortal" />
+<title>Stadt Haar, Landkreis München - BayernPortal</title>
+<link rel="preload" as="style" href="/styles/style.min.css?ver=4" />
+<link rel="stylesheet" href="/styles/style.min.css?ver=4" />
+<link rel="preload" as="style" href="/styles/jquery-ui/style.ui.css?ver=2" type="text/css" media="screen">
+<link href="/styles/jquery-ui/style.ui.css?ver=2" rel="stylesheet" type="text/css" media="screen">
+<link rel="preload" as="font" href="/fonts/Montserrat-VariableFont_wght.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Regular.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Bold.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="font" href="/fonts/Roboto-Light.ttf" type="font/ttf" crossorigin>
+<link rel="preload" as="style" href="/fonts/Montserrat/Montserrat.css?family=Montserrat:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/fonts/Montserrat/Montserrat.css?family=Montserrat:wght@400;500;600&amp;display=swap">
+</head>
+<body class="overflow-hidden has-dialog">
+<noscript>
+<div id="noscriptText" class="bg-grau-hintergrund p-5 text-center border">
+<h3 class="font-sans text-primary text-base md:text-lg font-normal tracking-wide">Hinweis: Bitte aktivieren Sie JavaScript in Ihrem Browser, um den vollen Funktionsumfang dieser Seite nutzen zu können!</h3>
+</div>
+</noscript>
+<div class="overflow-hidden w-full h-full fixed top-0 left-0 z-50 p-5 bg-modal-overlay bg-opacity-50 hc:bg-opacity-80 items-center"></div>
+<div class="h-full bg-background">
+<div id="menuMainContent" role="main">
+<div id="searchBox" hidden role="searchbox" aria-label="Suche">
+<form id="mainSearch" action="/xsuche" method="get">
+<div class="w-full flex px-4 pt-12 md:pt-20 pb-44 min-h-[450px] bg-hellblau-menu justify-center">
+<div class="flex flex-row gap-x-5 w-full max-w-6xl">
+<div class="w-full grow justify-start items-center">
+<div class="flex flex-row justify-center items-center w-full max-w-6xl rounded-l-xl rounded-r-xl focusContainer floatingLabelContainer">
+<label for="autoComplete" class="floatingLabel labelOutside absolute top-5 left-3 text-base md:text-xl">Was suchen Sie?</label>
+<input id="autoComplete" class="inputInDialog w-full shrink h-16 p-5 rounded-l-xl text-base md:text-xl rounded-r-none" type="text"
+name="q" aria-label="Suchbegriff eingeben" role="searchbox">
+<button id="headerSucheStarten" type="submit" aria-label="Suche starten"
+class="rounded-r-xl tint-primary-hover hover:bg-white hover:cursor-pointer border hover:border-primary bg-primary min-w-8 w-16 h-16">
+<span class="w-full h-full flex justify-center items-center">
+<img class="w-4 h-4 md:w-6 md:h-6 max-h-full tint-white" src="/images/search-glass.svg" alt="">
+</span>
+</button>
+</div>
+</div>
+<button type="button"
+class="toggleSearch bg-white rounded-lg min-w-8 w-8 h-8 hover:bg-primary hover:cursor-pointer tint-white-hover border border-primary flex justify-center items-center"
+aria-label="Schließen">
+<span class="w-full h-full relative flex justify-center items-center">
+<img class="w-4 h-4 tint-primary" src="/images/schliessen-black.svg" alt="Suche schließen">
+</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div id="mainContent" class="relative" role="main">
+<div class="locationBanner bg-grau-hintergrund py-3.5 md:py-3.5 px-4 flex flex-row justify-center" id="index-loc-refused-banner">
+<div class="md:flex justify-between py-3 max-w-7xl flex flex-row grow items-center">
+<div class="flex justify-between items-center content-center">
+<div class="flex space-x-4">
+<img alt="" class="w-5 h-6" src="/images/ortsauswahl.svg">
+<span class="text-primary text-sm md:text-xl font-medium ">- kein Ort -</span>
+</div>
+</div>
+<div class="flex">
+<button class="print:hidden locationSearch rounded-full bg-primary border border-primary hover:bg-white hover:border text-white hover:text-primary h-10" id="locationBannerSucheStarten" type="button">
+<span class="text-sm md:text-base font-paragraph py-1 md:py-2 px-4 md:px-5">Ort auswählen</span>
+</button>
+</div>
+</div>
+</div>
+<div class="display-none rs_skip_always" id="location-search"
+title="Bitte wählen Sie einen Ort aus!">
+<div>
+<p class="flex justify-between items-center content-center mx-1">Um ortsspezifische Informationen zu erhalten, wählen Sie bitte einen Ort:</p>
+<form action="/lokalisierung" id="localizationInputForm" method="post">
+<div class="mx-1" id="locationSearchBox">
+<div class="w-full flex flex-row justify-center items-center mt-10 mb-3 home floatingLabelContainer">
+<input name="locationAutocompleteSelectedValue" type="hidden" />
+<input name="redirectToVorOrtOnLocalization" type="hidden" value="false" />
+<input name="pfad" type="hidden" value="/dokumente/behoerde/66552873578" />
+<label class="floatingLabel labelOutside absolute left-12 top-2 text-base" for="localizationInputField">PLZ oder Ort / Ortsteil eingeben</label>
+<input autocapitalize="off"
+autocomplete="off" class="pl-12 w-full h-10 p-4 border-primary border-solid border rounded-l-xl rounded-r-xl" dir="ltr" id="localizationInputField" maxlength="2048"
+name="location" spellcheck="false" type="text" value="">
+</div>
+</div>
+<div class="flex justify-between flex-col">
+<button class="m-auto text-white bg-primary hover:bg-white border hover:border-primary hover:border-solid hover:text-primary hover:cursor-pointer font-base rounded-3xl text-base md:text-lg px-5 py-2.5 mt-6 text-center" aria-label="Ortsauswahl übernehmen"
+type="submit">Ortsauswahl übernehmen</button>
+<button class="locDialogClose link text-sm md:text-base text-primary hover:underline m-auto mt-4 mb-2 font-bold" aria-label="Keinen Ort auswählen"
+data-isLocalizationPresent="false"
+type="button">Keinen Ort auswählen</button>
+</div>
+</form>
+</div>
+</div>
+<div class="print:hidden px-4 pb-8 md:pb-10 flex flex-row justify-center">
+<div class="flex-1 breadcrumbs md:max-w-7xl py-3 md:py-5 text-xs md:text-base text-light-text font-rob-light tracking-wide">
+<a href="/" class="hover:underline md:inline" >Start</a>
+<span class="px-2 md:text-basebig md:inline rs_skip_always"> &gt; </span>
+<a href="/suche/behoerde" class="hover:underline md:inline inline">Behörden</a>
+<span class="px-2 md:text-basebig md:inline rs_skip_always inline"> &gt; </span>
+<a href="/dokumente/behoerde/73886855438" class="hover:underline md:inline inline">Gemeinden</a>
+</div>
+</div>
+<div id="pageTitle" class="w-full px-3 pb-10 md:pb-10 flex flex-row justify-center">
+<div class="max-w-6xl flex flex-col grow">
+<div class="flex flex-col gap-y-4 md:gap-y-9">
+<div class="flex flex-col">
+<h1 class="flex flex-row h-full md:items-center break-normal">Stadt Haar</h1>
+</div>
+<img id="behoerdeLogo" class="print:hidden max-w-[120px] mt-1.5 md:m-0" src="/bilder/6271236788687"
+title="© ©GemeindeHaar"
+alt="Logo der Gemeinde Haar ohne Text">
+</div>
+</div>
+</div>
+<div class="w-full px-3 flex justify-center">
+<div class="w-full max-w-6xl flex flex-col">
+<div class="grid grid-cols-11 w-full ">
+<div class="wrap-break-word col-span-11 md:col-span-4 pb-10 md:pb-9 md:border-r border-border-grau">
+<div class="md:display-none ml-2 mr-2 mb-8 md:mr-20 md:ml-0">
+<a href="https://formularserver-bp.bayern.de/sichererKontakt?caller=66552873578" target="_blank"
+class="border-primary border w-auto md:w-80 rounded-full text-center py-3.5 text-base md:text-basebig hover:text-primary font-paragraph px-4 text-white bg-primary hover:bg-white tint-primary-hover inline-block">
+<img class="w-4 mb-1 mr-1 shrink-0 inline-block tint-white" src="/images/services/lock-black.svg"
+alt="Sie können die Behörde auf sichere Weise kontaktieren">
+Sicheres Kontaktformular
+</a>
+</div>
+<div class="w-full ml-2 mr-2 text-base md:text-basebig md:mr-20 md:ml-0">
+<div class="flex flex-col space-y-7">
+<div>
+<h2 class="text-base md:text-basebig">Hausanschrift</h2>
+<p class="text-base md:text-basebig font-rob-light">
+Bahnhofstr. 7 <br />
+85540 Haar
+</p>
+</div>
+<div>
+<h2 class="text-base md:text-basebig">Postanschrift</h2>
+<p class="text-base md:text-basebig font-rob-light">Postfach 1209</p>
+<p class="text-base md:text-basebig font-rob-light">85540 Haar</p>
+</div>
+<div>
+<h2 class="text-base md:text-basebig">E-Mail</h2>
+<a class="font-rob-light text-primary md:hover:underline" href="mailto:info@stadt-haar.de" aria-label="Per E-Mail erreichen Sie uns unter:info@stadt-haar.de">info@stadt-haar.de</a>
+</div>
+<div>
+<h2 class="text-base md:text-basebig">Telefon</h2>
+<p class="text-base md:text-basebig font-rob-light">
+<a href="tel:+4989460020" aria-label="Telefonisch erreichen Sie uns unter:49 89 46002-0">+49 89 46002-0</a>
+</p>
+</div>
+<div>
+<h2 class="text-base md:text-basebig">Fax</h2>
+<p class="text-base md:text-basebig font-rob-light">
+<a href="tel:+498946002111" aria-label="Per Telefax erreichen Sie uns unter:49 89 46002-111">+49 89 46002-111</a>
+</p>
+</div>
+<div>
+<h2 class="text-base md:text-basebig">Webseite</h2>
+<p class="text-base md:text-basebig font-rob-light text-primary">
+<a class="md:hover:underline" target="_blank" href="http://www.stadt-haar.de">www.stadt-haar.de</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="wrap-break-word col-span-11 md:col-span-7 w-full text-base md:text-basebig flex md:justify-end">
+<div class="flex flex-col ml-2 mr-2 md:ml-0 md:mr-0 max-w-lg w-full md:px-4">
+<div class="flex flex-col md:mb-20">
+<a href="https://formularserver-bp.bayern.de/sichererKontakt?caller=66552873578" target="_blank"
+class="display-none md:inline-block w-64 md:w-80 border-primary border rounded-full py-3.5 text-center text-base md:text-basebig hover:text-primary font-paragraph px-4 text-white bg-primary hover:bg-white tint-primary-hover">
+<img class="w-4 mb-1 mr-1 shrink-0 inline-block tint-white" src="/images/services/lock-black.svg"
+alt="Sie können die Behörde auf sichere Weise kontaktieren">
+Sicheres Kontaktformular
+</a>
+</div>
+<div class="print:hidden pb-5 md:pb-6 mb-5 md:mb-6 md:w-[440px] rs_skip_always">
+<div class="flex items-center mt-12 md:mt-0 w-full sm:w-80 h-48 sm:w-[440px] md:h-64">
+<iframe title="Eine kleine Karte mit der Lage der Behörde im BayernAtlas" class="w-full h-48 sm:w-[440px] md:h-64" id="iFrameBayernAtlas" src="https://geoportal.bayern.de/bayernatlas/embed.html?Y=4479816.454133872&amp;X=5330270.26949492&amp;zoom=11&amp;crosshair=marker&amp;bgLayer=atkis&amp;lang=de_DE"></iframe>
+</div>
+</div>
+<ul class="print:hidden gap-y-1 md:w-[440px]">
+<li class="flex items-center justify-end py-2 border-border-grau border-b last:border-0">
+<a class="w-full flex flex-row items-center gap-x-3 py-4"
+href="https://www.bayerninfo.de/de/karte?startType=address&amp;destType=address&amp;dep=0&amp;dest=Haar%20Bahnhofstr.%207" target="_blank">
+<img class="w-4 h-4 md:w-8 md:h-8" src="/images/services/distanz-zwei-pins.svg"
+alt="">
+Routenplanung
+</a>
+<img class="w-4 h-4" src="/images/kreislink.svg" alt="">
+</li>
+<li class="flex items-center justify-end py-2 border-border-grau border-b last:border-0">
+<a class="w-full flex flex-row items-center gap-x-3 py-4"
+target="_blank"
+href="https://bahnland-bayern.de/de/moby/ueberblick?zope_command=qi_verify&amp;anyObjFilter_destination=12&amp;name_destination=Haar%2BBahnhofstr.%2B7">
+<img class="w-4 h-4 md:w-8 md:h-8" src="/images/services/bus.svg" alt="">
+Fahrplan für öffentliche Verkehrsmittel
+</a>
+<img class="w-4 h-4" src="/images/kreislink.svg" alt="">
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="w-full flex justify-center">
+<div class="w-full max-w-6xl flex flex-col">
+<div class="flex mt-12 md:mt-18 pt-10 md:pt-9 border-t border-border-grau">
+<div class="grid grid-cols-11 w-full space-y-5 md:space-y-0 pb-10 md:pb-8">
+<div
+class="wrap-break-word col-span-11 md:col-span-4 ml-2 mr-2 text-base md:text-basebig md:border-r border-border-grau md:ml-0 md:mr-0">
+<div class="flex flex-col space-y-10 md:space-y-8">
+<div>
+<h2 class="text-base md:text-basebig">Landkreis München</h2>
+<div class="md:display-none mt-5 flex flex-col items-start">
+<div class="flex flex-row md:mt-0 border-primary border rounded-full text-sm md:text-base text-primary font-paragraph px-2 md:px-5 hover:text-white hover:bg-primary tint-white-hover">
+<img class="w-3 h-6 m-1 tint-primary" src="/images/keyboard-pfeil-rechts.svg"
+alt="">
+<a href="/dokumente/behoerde/93442507417" class="flex items-center justify-center">Zum Landratsamt</a>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-base md:text-basebig">Erster Bürgermeister</h2>
+<div class="text-base md:text-basebig font-rob-light md:mt-2 mt-2">
+<span>
+Dr.
+Andreas Bukowski
+</span>
+</div>
+</div>
+<div class="md:display-none">
+<h2 class="text-base md:text-basebig">Einwohnerzahl</h2>
+<div class="text-base md:text-basebig font-rob-light md:mt-3 mt-3">23.005 (Stand: 31. März 2026)</div>
+</div>
+</div>
+</div>
+<div class="wrap-break-word col-span-11 md:col-span-7 md:ml-0 display-none text-base md:text-basebig md:flex md:justify-end space-y-8">
+<div class="flex flex-col max-w-lg w-full md:px-4 space-y-8">
+<div class="flex flex-col items-start">
+<div class="flex flex-row px-4 md:px-5 py-1.5 rounded-full text-xs md:text-base bg-white border border-primary align-baseline text-center text-primary font-paragraph hover:bg-primary hover:border-hellgrau-hintergrund hover:text-white cursor-pointer tint-white-hover">
+<img class="w-3 h-6 mr-2 mt-1 mb-1 tint-primary" src="/images/keyboard-pfeil-rechts.svg"
+alt="">
+<a href="/dokumente/behoerde/93442507417" class="flex items-center justify-center">Zum Landratsamt</a>
+</div>
+</div>
+<div class="h-full flex flex-col justify-end">
+<h2 class="text-base md:text-basebig mt-auto">Einwohnerzahl</h2>
+<div class="text-base md:text-basebig font-rob-light md:mt-2 mt-2">23.005 (Stand: 31. März 2026)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-6xl flex flex-col">
+<div class="ml-2 mr-2 md:ml-0 md:mr-0 mt-20 md:mt-18">
+<ul class="w-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-2 gap-y-3 md:gap-x-5 md:gap-y-5 lg:grow">
+<!-- /* Gebäude & Öffnungszeiten */ -->
+<li class="flex xl:grow">
+<a aria-label="Gebäude und Öffnungszeiten"
+class="px-4 lg:px-6 py-5 md:py-8 w-40 h-36 md:w-44 md:h-44 lg:w-64 lg:h-60 flex grow flex-col justify-between border border-border-grau rounded-lg bg-grau-hintergrund text-xs md:text-sm lg:text-basebig break-normal"
+href="/dokumente/behoerde/66552873578/adressen">
+<img class="w-6 h-6 md:w-10 md:h-10" src="/images/services/uhr.svg"
+alt="Detailseite Seite über Gebäude und Öffnungszeiten öffnen"
+aria-hidden="true">
+Gebäude und Öffnungszeiten
+</a>
+</li>
+<!-- /* Ansprechpartner */ -->
+<li class="flex xl:grow">
+<a aria-label="Ansprechpartner"
+class="px-4 lg:px-6 py-5 md:py-8 w-40 h-36 md:w-44 md:h-44 lg:w-64 lg:h-60 flex grow flex-col justify-between border border-border-grau rounded-lg bg-grau-hintergrund text-xs md:text-sm lg:text-basebig break-normal"
+href="/dokumente/behoerde/66552873578/mitarbeiter">
+<img class="w-6 h-6 md:w-10 md:h-10"
+src="/images/services/speaking-person.svg"
+alt="Detailseite Seite zum Ansprechpartner öffnen"
+aria-hidden="true">
+Ansprechpartner
+</a>
+</li>
+<!-- /* Organisationseinheiten und mehr */ -->
+<li class="flex xl:grow">
+<a aria-label="Organisationseinheiten und mehr"
+class="px-4 lg:px-6 py-5 md:py-8 w-40 h-36 md:w-44 md:h-44 lg:w-64 lg:h-60 flex grow flex-col justify-between border border-border-grau rounded-lg bg-grau-hintergrund text-xs md:text-sm lg:text-basebig break-normal"
+href="/dokumente/behoerde/66552873578/organigramm">
+<img class="w-6 h-6 md:w-10 md:h-10"
+src="/images/services/ausgewaehlte-behoerden-und-einrichtungen.svg"
+alt="Detailseite Seite zum Organisationseinheiten und mehr öffnen"
+aria-hidden="true">
+Organisationseinheiten und mehr
+</a>
+</li>
+<!-- /* Leistungen */ -->
+<li class="flex xl:grow">
+<a aria-label="Leistungen"
+class="px-4 lg:px-6 py-5 md:py-8 w-40 h-36 md:w-44 md:h-44 lg:w-64 lg:h-60 flex grow flex-col justify-between border border-border-grau rounded-lg bg-grau-hintergrund text-xs md:text-sm lg:text-basebig break-normal"
+href="/dokumente/behoerde/66552873578/leistungen?rekursiv=true">
+<img class="w-6 h-6 md:w-10 md:h-10" src="/images/dots-menu-icon.svg"
+alt="Leistungen"
+aria-hidden="true">
+Leistungen (327)
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="content-container bg-grau-hintergrund px-4 mt-32 md:mt-20">
+<div class="w-full max-w-6xl pt-24 md:pt-24 pb-32 md:pb-56 text-xs flex flex-col items-center gap-5 relative">
+<button aria-label="Alle Bereiche ausklappen"
+class="rs_skip_always absolute top-10 md:top-16 right-2 h-8 w-8 xl:translate-x-[44px] custom-toggle-all-accordions tooltip-enabled"
+data-tooltip="Alle Bereiche ausklappen"
+type="button">
+</button>
+<div class="accordion">
+<h3 id="heading-zweckVerbandMitgliederAcc21" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="zweckVerbandMitgliederAcc21"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/persondocument.svg"
+alt="">
+<span>Mitgliedschaft in Zweckverbänden</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="zweckVerbandMitgliederAcc21" aria-labelledby="heading-zweckVerbandMitgliederAcc21" role="region" class="md:flex-row space-y-5 accordion-content px-11 md:px-20">
+<ul class="flex flex-col max-w-6xl w-full bg-white rounded-lg">
+<li class="border-border-grau border-b last:border-0 mr-2">
+<a class="pt-7 pb-5 flex flex-row justify-between items-center text-base md:text-basebig text-text"
+href="/dokumente/behoerde/3540614582112" aria-label=" Planungsverband Äußerer Wirtschaftsraum München">
+Planungsverband Äußerer Wirtschaftsraum München
+<div class="col-span-1 shrink-0 tooltip-enabled" data-tooltip="Interner Link">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/keyboard-pfeil-rechts.svg" alt="Besuchen Sie die Detailseite von Planungsverband Äußerer Wirtschaftsraum München" aria-hidden="true">
+</div>
+</a>
+</li>
+<li class="border-border-grau border-b last:border-0 mr-2">
+<a class="pt-7 pb-5 flex flex-row justify-between items-center text-base md:text-basebig text-text"
+href="/dokumente/behoerde/1663283190108" aria-label=" Regionaler Planungsverband München">
+Regionaler Planungsverband München
+<div class="col-span-1 shrink-0 tooltip-enabled" data-tooltip="Interner Link">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/keyboard-pfeil-rechts.svg" alt="Besuchen Sie die Detailseite von Regionaler Planungsverband München" aria-hidden="true">
+</div>
+</a>
+</li>
+<li class="border-border-grau border-b last:border-0 mr-2">
+<a class="pt-7 pb-5 flex flex-row justify-between items-center text-base md:text-basebig text-text"
+href="/dokumente/behoerde/4330949733108" aria-label=" Zweckverband Ernst-Mach-Gymnasium Haar">
+Zweckverband Ernst-Mach-Gymnasium Haar
+<div class="col-span-1 shrink-0 tooltip-enabled" data-tooltip="Interner Link">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/keyboard-pfeil-rechts.svg" alt="Besuchen Sie die Detailseite von Zweckverband Ernst-Mach-Gymnasium Haar" aria-hidden="true">
+</div>
+</a>
+</li>
+<li class="border-border-grau border-b last:border-0 mr-2">
+<a class="pt-7 pb-5 flex flex-row justify-between items-center text-base md:text-basebig text-text"
+href="/dokumente/behoerde/2384727601108" aria-label=" Zweckverband Staatliche Realschule Vaterstetten">
+Zweckverband Staatliche Realschule Vaterstetten
+<div class="col-span-1 shrink-0 tooltip-enabled" data-tooltip="Interner Link">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/keyboard-pfeil-rechts.svg" alt="Besuchen Sie die Detailseite von Zweckverband Staatliche Realschule Vaterstetten" aria-hidden="true">
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="accordion">
+<h3 id="heading-informationenZumOrtAcc1" class="text-base md:text-xl font-menu font-medium">
+<span role="button" tabindex="0"
+aria-controls="informationenZumOrtAcc1"
+aria-expanded="false"
+class="accordion-toggle">
+<span class="flex space-x-4 items-center">
+<img class="w-4 h-4 md:w-8 md:h-8 print:hidden" src="/images/services/weitere-informationen.svg"
+alt="">
+<span>Informationen zum Ort</span>
+</span>
+<span class="flex space-x-4 ml-8 md:ml-0 items-center tooltip-enabled"
+data-tooltip="Bereich ausklappen">
+<span class="h-3 w-3 md:h-5 md:w-5 accordion-arrow"></span>
+</span>
+</span>
+</h3>
+<div id="informationenZumOrtAcc1" aria-labelledby="heading-informationenZumOrtAcc1" role="region" class="md:flex-row space-y-5 accordion-content px-11 md:px-20">
+<div class="flex flex-col max-w-6xl w-full bg-white rounded-lg">
+<a href="/dokumente/behoerde/66552873578/ortsteile" class="pt-7 pb-5 flex flex-row justify-between border-border-grau border-b last:border-0 items-center"
+aria-label="Ortsteile">
+<div class="text-base md:text-basebig text-text">Ortsteile</div>
+<div class="shrink-0 tooltip-enabled" data-tooltip="Interner Link" aria-hidden="true">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/keyboard-pfeil-rechts.svg"
+alt="" >
+</div>
+</a>
+<a href="/dokumente/behoerde/66552873578/staatlichebehoerden" class="pt-7 pb-5 flex flex-row justify-between border-border-grau border-b last:border-0 items-center"
+aria-label="Ausgewählte Behörden und Einrichtungen">
+<div class="text-base md:text-basebig text-text">Ausgewählte Behörden und Einrichtungen</div>
+<div class="shrink-0 tooltip-enabled" data-tooltip="Interner Link" aria-hidden="true">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/keyboard-pfeil-rechts.svg"
+alt="" >
+</div>
+</a>
+<a href="/dokumente/behoerde/66552873578/polizei" class="pt-7 pb-5 flex flex-row justify-between border-border-grau border-b last:border-0 items-center"
+aria-label="Polizeidienststellen">
+<div class="text-base md:text-basebig text-text">Polizeidienststellen</div>
+<div class="shrink-0 tooltip-enabled" data-tooltip="Interner Link" aria-hidden="true">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/keyboard-pfeil-rechts.svg"
+alt="" >
+</div>
+</a>
+<a href="https://www.km.bayern.de/ministerium/schule-und-ausbildung/schulsuche.html?u=1&amp;t=9999&amp;s=85540" target="_blank"
+class="pt-7 pb-5 flex flex-row justify-between border-border-grau border-b last:border-0 items-center"
+aria-label="Schulen im Ort">
+<div class="text-base md:text-basebig text-text">Schulen im Ort</div>
+<div class="shrink-0 tooltip-enabled" data-tooltip="Externer Link" aria-hidden="true">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/kreislink.svg"
+alt="">
+</div>
+</a>
+<a href=" https://www.hdbg.eu/gemeinden/index.php/detail?rschl=9184123" target="_blank"
+class="pt-7 pb-5 flex flex-row justify-between border-border-grau border-b last:border-0 items-center"
+aria-label="Wappen">
+<div class="text-base md:text-basebig text-text">Wappen</div>
+<div class="shrink-0 tooltip-enabled" data-tooltip="Externer Link" aria-hidden="true">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/kreislink.svg"
+alt="">
+</div>
+</a>
+<a href="https://www.statistik.bayern.de/mam/produkte/statistik_kommunal/2025/09184123.pdf" target="_blank"
+class="pt-7 pb-5 flex flex-row justify-between border-border-grau border-b last:border-0 items-center"
+aria-label="Statistik kommunal">
+<div class="text-base md:text-basebig text-text">Statistik kommunal</div>
+<div class="shrink-0 tooltip-enabled" data-tooltip="Externer Link" aria-hidden="true">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/kreislink.svg"
+alt="">
+</div>
+</a>
+<a href="https://www.statistik.bayern.de/mam/statistik/gebiet_bevoelkerung/demographischer_wandel/demographische_profile/09184123.pdf" target="_blank"
+class="pt-7 pb-5 flex flex-row justify-between border-border-grau border-b last:border-0 items-center"
+aria-label="Demographie-Spiegel">
+<div class="text-base md:text-basebig text-text">Demographie-Spiegel</div>
+<div class="shrink-0 tooltip-enabled" data-tooltip="Externer Link" aria-hidden="true">
+<img class="w-4 h-4 md:w-6 md:h-6" src="/images/kreislink.svg"
+alt="">
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button tabindex="0" data-tooltip="Zum Seitenanfang" id="btnScrollTop"
+class="rs_skip_always print:hidden backToTop w-8 h-8 md:w-14 md:h-14 right-6 md:right-4 bottom-28 z-10 fixed display-none"
+type="button">
+<span class="w-full h-full border rounded-full bg-white tint-white-hover hover:bg-primary border-primary flex justify-center items-center">
+<img class="w-4 h-4 tint-primary" src="/images/arrow-up-1.svg" alt="Zum Seitenanfang">
+</span>
+</button>
+</div>
+</div>
+<div tabindex="0"></div>
+</body>
+</html>

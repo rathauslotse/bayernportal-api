@@ -1,0 +1,2 @@
+providers:
+  - Rathauslotse\BayernPortal\BayernPortalServiceProvider

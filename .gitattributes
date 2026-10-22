@@ -10,3 +10,4 @@
 /phpunit.xml        export-ignore
 /pint.json          export-ignore
 /.env.testing.example export-ignore
+/testbench.yaml     export-ignore

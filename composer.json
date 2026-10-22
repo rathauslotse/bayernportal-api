@@ -48,10 +48,11 @@
         }
     },
     "scripts": {
-        "test": "pest --exclude-group=integration",
+        "test": "pest --exclude-group=integration --exclude-group=scraper-live",
         "test:integration": "pest --group=integration",
+        "test:scraper": "BAYERNPORTAL_SCRAPER_LIVE=1 pest --group=scraper-live",
         "test:contract": "pest --group=contract",
-        "test:coverage": "pest --exclude-group=integration --coverage --min=90",
+        "test:coverage": "pest --exclude-group=integration --exclude-group=scraper-live --coverage --min=90",
         "analyse": "phpstan analyse --memory-limit=1G",
         "format": "pint",
         "lint": "pint --test"

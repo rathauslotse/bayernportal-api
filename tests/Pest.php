@@ -52,6 +52,29 @@ pest()->extend(TestCase::class)
 
 pest()->extend(TestCase::class)->group('contract')->in('Contract');
 
+/*
+|--------------------------------------------------------------------------
+| Live scraper suite
+|--------------------------------------------------------------------------
+|
+| Runs the scraper driver against the real www.bayernportal.de. Opt in with
+| BAYERNPORTAL_SCRAPER_LIVE=1 (`composer test:scraper`); no credentials needed.
+|
+*/
+
+pest()->extend(TestCase::class)
+    ->group('scraper-live')
+    ->beforeEach(function (): void {
+        if (! getenv('BAYERNPORTAL_SCRAPER_LIVE')) {
+            $this->markTestSkipped('Set BAYERNPORTAL_SCRAPER_LIVE=1 to run the live scraper suite.');
+        }
+
+        config()->set('bayernportal.driver', 'scraper');
+        config()->set('bayernportal.cache.enabled', true);
+        config()->set('cache.default', 'array');
+    })
+    ->in('ScraperLive');
+
 /**
  * Skip a live test unless heavy (unpaginated, very large) requests are allowed.
  */
@@ -99,4 +122,74 @@ function assertRequested(string $pathAndQuery): void
     Illuminate\Support\Facades\Http::assertSent(
         fn (Illuminate\Http\Client\Request $request): bool => $request->url() === TestCase::BASE_URL.$pathAndQuery,
     );
+}
+
+/**
+ * Switch the container to the scraper driver with the test index, no
+ * throttling and no retries.
+ */
+function useScraper(bool $cache = false): void
+{
+    config()->set('cache.default', 'array');
+    config()->set('bayernportal.driver', 'scraper');
+    config()->set('bayernportal.cache.enabled', $cache);
+    config()->set('bayernportal.scraper.index_path', __DIR__.'/Fixtures/scraper/municipalities.json');
+    config()->set('bayernportal.scraper.throttle_ms', 0);
+    config()->set('bayernportal.scraper.retry.times', 0);
+    config()->set('bayernportal.scraper.retry.sleep_ms', 0);
+    app()->forgetInstance(Rathauslotse\BayernPortal\Contracts\Connector::class);
+    app()->forgetInstance(Rathauslotse\BayernPortal\BayernPortal::class);
+    Rathauslotse\BayernPortal\Facades\BayernPortal::clearResolvedInstances();
+}
+
+/**
+ * HTML fixture recorded from www.bayernportal.de (tests/Fixtures/scraper).
+ */
+function htmlFixture(string $name): string
+{
+    return (string) file_get_contents(__DIR__.'/Fixtures/scraper/'.$name.'.html');
+}
+
+/**
+ * Serve the recorded Stadt Haar pages for www.bayernportal.de requests.
+ * $overrides maps a path (without query) to a fixture name or a response.
+ *
+ * @param  array<string, string|GuzzleHttp\Promise\PromiseInterface>  $overrides
+ */
+function fakeWebsite(array $overrides = []): void
+{
+    $haar = 'dokumente/behoerde/66552873578';
+    $routes = [
+        $haar => 'authority',
+        $haar.'/adressen' => 'buildings',
+        $haar.'/mitarbeiter/alle' => 'contacts',
+        $haar.'/leistungen' => 'authority-services',
+        $haar.'/onlineverfahren' => 'online-procedures',
+        'dokumente/leistung/8110751776' => 'service-description-full',
+        'suche/leistung/alphabetisch' => 'services',
+        'suche/lebenslage/hierarchisch/buerger' => 'life-situation-category',
+        'dokumente/lebenslage/781142333177167' => 'life-situation',
+        ...$overrides,
+    ];
+
+    Illuminate\Support\Facades\Http::fake(function (Illuminate\Http\Client\Request $request) use ($routes) {
+        $path = ltrim((string) parse_url($request->url(), PHP_URL_PATH), '/');
+        $localised = str_contains($request->url(), 'gemeinde=');
+        $route = $routes[$path] ?? match (true) {
+            str_starts_with($path, 'dokumente/leistung/') => $localised ? 'service-description-localised' : 'service-description',
+            str_starts_with($path, 'dokumente/lebenslage/') => 'life-situation-leaf',
+            str_starts_with($path, 'suche/lebenslage/hierarchisch/') => '<html><body><h1>Lebenslagen</h1></body></html>',
+            default => null,
+        };
+
+        if ($route instanceof GuzzleHttp\Promise\PromiseInterface) {
+            return $route;
+        }
+
+        if ($route === null) {
+            return Illuminate\Support\Facades\Http::response(htmlFixture('not-found'), 400);
+        }
+
+        return Illuminate\Support\Facades\Http::response(str_starts_with($route, '<') ? $route : htmlFixture($route), 200, ['Content-Type' => 'text/html;charset=UTF-8']);
+    });
 }
