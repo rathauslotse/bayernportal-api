@@ -40,7 +40,7 @@ Heavy calls belong in a queued job or a scheduled command, not in a web request.
 | Call | Scraper | Website source |
 |---|---|---|
 | `agencies()->find($agencyKey)` | ✅ | authority page + buildings |
-| `agencies()->services()` | ✅ | `/dokumente/behoerde/{id}/leistungen` |
+| `agencies()->services()` | ✅ | `/dokumente/behoerde/{id}/leistungen`, plus the administrative association's list |
 | `agencies()->serviceDescriptions()` | ✅ slow | one service description page per service |
 | `agencies()->forms()`, `formsByService()` | ✅ slow | from the service descriptions |
 | `agencies()->onlineProcedures()`, `onlineProceduresByService()` | ✅ | `/dokumente/behoerde/{id}/onlineverfahren` |
@@ -52,7 +52,7 @@ Heavy calls belong in a queued job or a scheduled command, not in a web request.
 | `authorities()->services()` | ✅ | `/dokumente/behoerde/{id}/leistungen` |
 | `authorities()->list()`, `all()`, `delegatedServices()` | ❌ | – |
 | `contacts()->*` | ❌ | – |
-| `services()->list()` (with or without a municipality) | ✅ | municipality list or `/suche/leistung/alphabetisch` |
+| `services()->list()` (with or without a municipality) | ✅ | municipality list (plus administrative association) or `/suche/leistung/alphabetisch` |
 | `services()->find()` | ✅ | `/dokumente/leistung/{id}` |
 | `serviceDescriptions()->find()` | ✅ | `/dokumente/leistung/{id}` |
 | `serviceDescriptions()->list($municipalityKey)` | ✅ slow | one page per service |
@@ -87,9 +87,10 @@ BAYERNPORTAL_SCRAPER_INDEX_PATH=storage/app/bayernportal/municipalities.json
 - **Ids.** Authority, service and procedure ids are the website's ids, which match the ids in the REST API's `url` and `bwwlink` fields. The website does not show ids for **buildings and contacts**. Their ids are synthetic: stable hashes of the authority and the visible name and address. They work with `building()` and `buildingContact()`, but they are not the REST API's ids.
 - **Leading zeros.** Some website ids start with `0` (e.g. `047980064430`). An integer id loses that zero. The scraper remembers every id it sees on a page and otherwise retries with a leading zero, which can cost one extra request.
 - **Missing fields.** The website does not show sort orders, logo image data, subordinate authorities, written-form requirements of forms, internal ids, last-modified timestamps (only "Stand") or the relation from life situations to agencies. These fields stay empty.
+- **Administrative associations.** Over 900 Bavarian municipalities belong to a Verwaltungsgemeinschaft, which handles most of their tasks. Their own service list holds only a handful of entries. For municipality calls (`services()->list($municipalityKey)`, `agencies()->services()`, `serviceDescriptions()->list()`) the scraper therefore appends the association's services, without duplicates and after the municipality's own. Service descriptions keep the municipality's localisation, so the responsibilities name the association. `authorities()->services($id)` still returns only that authority's list. The association's name is available as `$agency->administrativeAssociation`, its id as `$agency->raw['mitgliedVonVerwaltungsgemeinschaftId']`.
 - **Authority type.** `type` and `group` come from the breadcrumb (e.g. "Gemeinden", "Behörden"), not from the REST categories.
 - **Regional supplements.** With a municipality, the website shows the municipality's supplements inline in the sections and lists the responsible authorities. The section HTML (`description`, `fees` …) therefore includes the supplements. Each supplement is also available in `$description->raw['regionaleErgaenzungen']` (section, authority name and HTML). `regionalSupplementIds` stays empty because the website shows no ids.
-- **Extra facts.** The authority pages show more than the REST `Authority` DTO holds: address, phone, fax, the parent district office, memberships in special-purpose associations and the municipality key. These are kept in `$authority->raw`.
+- **Extra facts.** The authority pages show more than the REST `Authority` DTO holds: address, phone, fax, the parent district office, the administrative association, memberships in special-purpose associations and the municipality key. These are kept in `$authority->raw`.
 - **Errors.** The website answers unknown pages with HTTP 400 and a "Seite nicht gefunden" page. The scraper maps this to `NotFoundException`. When the website rate-limits or shows a bot check (captcha), the scraper throws `ScraperBlockedException`. Raise `scraper.throttle_ms` and try again later.
 
 ## Testing

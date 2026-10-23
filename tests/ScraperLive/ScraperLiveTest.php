@@ -7,7 +7,7 @@ use Rathauslotse\BayernPortal\Facades\BayernPortal;
 
 /*
  * Smoke tests against the real www.bayernportal.de. They double as an early
- * warning when the website's markup changes. About 15 throttled requests.
+ * warning when the website's markup changes. About 17 throttled requests.
  */
 
 const LIVE_MUNICIPALITY = '09184123'; // Stadt Haar
@@ -29,6 +29,13 @@ it('lists the services of a municipality', function (): void {
 
     expect($services->count())->toBeGreaterThan(100)
         ->and($services->first()?->id)->toBeGreaterThan(0);
+});
+
+it('includes the services of the administrative association', function (): void {
+    $services = BayernPortal::services()->list('09178115'); // Attenkirchen, member of VG Zolling
+
+    expect($services->count())->toBeGreaterThan(300)
+        ->and($services->map(fn ($service): int => $service->id)->all())->toContain(92442164491);
 });
 
 it('reads a localised service description', function (): void {

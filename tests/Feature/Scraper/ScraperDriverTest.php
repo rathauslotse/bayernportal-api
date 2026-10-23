@@ -157,6 +157,39 @@ it('lists all services or those of a municipality', function (): void {
         ->and(BayernPortal::agencies()->services('9184123'))->toHaveCount(25);
 });
 
+it('adds the services of the administrative association for member municipalities', function (): void {
+    fakeAttenkirchen();
+
+    $services = BayernPortal::services()->list('09178115');
+    $ids = $services->map(fn ($service): int => $service->id)->all();
+
+    expect($ids)->toHaveCount(5)
+        ->and(array_slice($ids, 0, 4))->toBe([5094145496165, 5077367719165, 328811920166, 315958588893])
+        ->and(array_unique($ids))->toBe($ids)
+        ->and($ids)->toContain(92442164491);
+
+    Http::assertSent(fn (Request $request): bool => str_contains($request->url(), 'behoerde/35218359833/leistungen?rekursiv=true'));
+});
+
+it('keeps the municipality localisation for services of the administrative association', function (): void {
+    fakeAttenkirchen();
+
+    BayernPortal::serviceDescriptions()->find(92442164491, '09178115');
+
+    Http::assertSent(fn (Request $request): bool => str_contains($request->url(), 'leistung/92442164491')
+        && str_contains($request->url(), 'behoerde=81664345500')
+        && str_contains($request->url(), 'gemeinde=896190982673'));
+    Http::assertNotSent(fn (Request $request): bool => str_contains($request->url(), '35218359833'));
+});
+
+it('requests no association list for municipalities without one', function (): void {
+    fakeWebsite();
+
+    BayernPortal::services()->list('09184123');
+
+    Http::assertSentCount(1);
+});
+
 it('reads a localised service description with responsibilities and supplements', function (): void {
     fakeWebsite();
 
@@ -372,3 +405,12 @@ it('lets BayernPortal::fake() work with the scraper driver', function (): void {
     expect(BayernPortal::services()->list())->toHaveCount(2)
         ->and(app(Connector::class))->toBeInstanceOf(HttpConnector::class);
 });
+
+function fakeAttenkirchen(): void
+{
+    fakeWebsite([
+        'dokumente/behoerde/81664345500' => 'authority-vg-member',
+        'dokumente/behoerde/81664345500/leistungen' => 'vg-member-services',
+        'dokumente/behoerde/35218359833/leistungen' => 'vg-services',
+    ]);
+}

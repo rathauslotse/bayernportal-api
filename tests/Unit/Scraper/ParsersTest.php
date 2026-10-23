@@ -97,3 +97,13 @@ it('derives the municipality key of independent cities from their district code'
     expect($payload['gemeindekennziffer'])->toBe('09162000')
         ->and($payload['bezeichnung'])->toBe('Landeshauptstadt München');
 });
+
+it('reads the administrative association of a member municipality', function (): void {
+    $member = Rathauslotse\BayernPortal\Scraper\Pages\AuthorityPage::parse(new Document(htmlFixture('authority-vg-member')), '81664345500');
+    $city = Rathauslotse\BayernPortal\Scraper\Pages\AuthorityPage::parse(new Document(htmlFixture('authority')), '66552873578');
+
+    expect($member['mitgliedVonVerwaltungsgemeinschaftId'])->toBe('35218359833')
+        ->and($member['mitgliedVonVerwaltungsgemeinschaft'])->toBe('Verwaltungsgemeinschaft Zolling')
+        ->and(Rathauslotse\BayernPortal\Data\Agency::fromPayload(new Rathauslotse\BayernPortal\Support\Payload($member))->administrativeAssociation)->toBe('Verwaltungsgemeinschaft Zolling')
+        ->and($city)->not->toHaveKeys(['mitgliedVonVerwaltungsgemeinschaft', 'mitgliedVonVerwaltungsgemeinschaftId']);
+});

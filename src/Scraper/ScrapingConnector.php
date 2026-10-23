@@ -412,9 +412,40 @@ final class ScrapingConnector implements Connector
     }
 
     /**
+     * Services of a municipality, including those of its administrative
+     * association (Verwaltungsgemeinschaft), which handles most tasks of
+     * its member municipalities. The municipality's own services come first.
+     *
      * @return list<array{id: int, portalId: string, bezeichnung: string, url: string}>
      */
     private function municipalityServices(string $portalId): array
+    {
+        $page = $this->ownServices($portalId);
+        $services = ServiceListPage::parse($page);
+        $association = ServiceListPage::administrativeAssociationId($page);
+
+        if ($association === null) {
+            return $services;
+        }
+
+        $known = array_column($services, 'portalId', 'portalId');
+        $associationPage = $this->fetch('dokumente/behoerde/'.$association.'/leistungen', ['rekursiv' => 'true']);
+
+        foreach (ServiceListPage::parse($associationPage) as $service) {
+            if (! isset($known[$service['portalId']])) {
+                $services[] = $service;
+            }
+        }
+
+        return $services;
+    }
+
+    /**
+     * The municipality's own service list. Remembers its localisation, so
+     * service descriptions keep the municipality's local context even when
+     * the service belongs to the administrative association.
+     */
+    private function ownServices(string $portalId): Document
     {
         $page = $this->fetch('dokumente/behoerde/'.$portalId.'/leistungen', ['rekursiv' => 'true']);
         $context = ServiceListPage::localisation($page);
@@ -423,7 +454,7 @@ final class ScrapingConnector implements Connector
             $this->state->rememberLocalisation($portalId, $context);
         }
 
-        return ServiceListPage::parse($page);
+        return $page;
     }
 
     /**
@@ -487,7 +518,7 @@ final class ScrapingConnector implements Connector
         $context = $this->state->localisation($portalId);
 
         if ($context === null) {
-            $this->municipalityServices($portalId);
+            $this->ownServices($portalId);
             $context = $this->state->localisation($portalId);
         }
 

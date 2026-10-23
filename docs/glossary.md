@@ -44,6 +44,7 @@ Terms that only appear on www.bayernportal.de and in the scraper's raw payloads.
 | Stand | `updatedAt` | |
 | Zweckverband | special-purpose association | `raw['mitgliedschaften']` |
 | Landratsamt | district office | `raw['uebergeordneteBehoerdeId']` |
+| Verwaltungsgemeinschaft (VG) | administrative association | `Agency::$administrativeAssociation`, id in `raw['mitgliedVonVerwaltungsgemeinschaftId']` |
 | Einwohnerzahl | population | not mapped |
 
 ## Query parameters

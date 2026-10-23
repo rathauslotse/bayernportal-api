@@ -42,6 +42,17 @@ final class ServiceListPage
     }
 
     /**
+     * The administrative association (Verwaltungsgemeinschaft) whose
+     * services a member municipality's list links to, if any.
+     */
+    public static function administrativeAssociationId(Document $page): ?string
+    {
+        $href = $page->first('//a[contains(@href, "/leistungen")][normalize-space()="Zur Verwaltungsgemeinschaft"]')?->getAttribute('href');
+
+        return Links::id($href, 'behoerde');
+    }
+
+    /**
      * The website's localisation parameters (plz, behoerde, gemeinde) as
      * found on the links of a municipality's service list.
      *

@@ -50,6 +50,8 @@ final class AuthorityPage
             'logoUrl' => Links::absolute($page->first('//img[@id="behoerdeLogo"]')?->getAttribute('src')),
             'gemeindekennziffer' => self::municipalityKey($page),
             'uebergeordneteBehoerdeId' => Links::id($page->first('//a[normalize-space()="Zum Landratsamt"]')?->getAttribute('href'), 'behoerde'),
+            'mitgliedVonVerwaltungsgemeinschaft' => self::administrativeAssociation($page),
+            'mitgliedVonVerwaltungsgemeinschaftId' => Links::id($page->first('//a[normalize-space()="Zur Verwaltungsgemeinschaft"]')?->getAttribute('href'), 'behoerde'),
             'mitgliedschaften' => self::memberships($page),
         ];
 
@@ -141,6 +143,18 @@ final class AuthorityPage
         }
 
         return strlen($match[1]) === 5 ? $match[1].'000' : $match[1];
+    }
+
+    /**
+     * The administrative association (Verwaltungsgemeinschaft) a member
+     * municipality belongs to. The page only shows the place name, e.g.
+     * "Zolling", so the REST spelling is rebuilt from it.
+     */
+    private static function administrativeAssociation(Document $page): ?string
+    {
+        $name = $page->text('//h2[normalize-space()="Mitglied der Verwaltungsgemeinschaft"]/following-sibling::div[1]');
+
+        return $name === null ? null : 'Verwaltungsgemeinschaft '.$name;
     }
 
     /**
