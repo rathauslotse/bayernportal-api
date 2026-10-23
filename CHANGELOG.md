@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-23
+
+### Added
+
+- Scraper: `Agency::$administrativeAssociation` is filled from the authority page, the association's id is available as `raw['mitgliedVonVerwaltungsgemeinschaftId']`.
+
+### Fixed
+
+- Scraper: services of a Verwaltungsgemeinschaft are included for its member municipalities (`services()->list($municipalityKey)`, `agencies()->services()`, `serviceDescriptions()->list()`). Before, members such as Attenkirchen returned only their few own services.
+
 ## [1.1.0] - 2026-10-22
 
 ### Added
@@ -33,6 +43,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - `BayernPortal::fake()` with bundled fixtures and request assertions.
 - Live integration test suite with response recording and an offline contract check.
 
-[Unreleased]: https://github.com/rathauslotse/bayernportal-api/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/rathauslotse/bayernportal-api/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/rathauslotse/bayernportal-api/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/rathauslotse/bayernportal-api/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/rathauslotse/bayernportal-api/releases/tag/v1.0.0
